@@ -69,10 +69,18 @@ class TermsPopupView: UIView, Modal {
         view.cancelButton.setTitle(cancelText, for: .normal)
         view.cancelAction = cancelAction
         view.moveToUrlAction = moveToUrlAction
+        view.translatesAutoresizingMaskIntoConstraints = false
         parent.addSubview(view)
-        view.snp.makeConstraints { (make) in
-            make.edges.equalTo(parent)
-        }
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: parent.topAnchor),
+            view.bottomAnchor.constraint(equalTo: parent.bottomAnchor),
+            view.leftAnchor.constraint(equalTo: parent.leftAnchor),
+            view.rightAnchor.constraint(equalTo: parent.rightAnchor),
+        ])
+//        parent.addSubview(view)
+//        view.snp.makeConstraints { (make) in
+//            make.edges.equalTo(parent)
+//        }
         
         view.show(animated: true)
     }

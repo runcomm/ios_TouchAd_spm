@@ -78,10 +78,17 @@ class PromptCommonPopupView: UIView, Modal {
         view.cancelButton.layer.cornerRadius = 12
         view.cancelButton.layer.maskedCorners = [.layerMinXMaxYCorner]
         view.cancelAction = cancelAction
+        view.translatesAutoresizingMaskIntoConstraints = false
         parent.addSubview(view)
-        view.snp.makeConstraints { (make) in
-            make.edges.equalTo(parent)
-        }
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: parent.topAnchor),
+            view.bottomAnchor.constraint(equalTo: parent.bottomAnchor),
+            view.leftAnchor.constraint(equalTo: parent.leftAnchor),
+            view.rightAnchor.constraint(equalTo: parent.rightAnchor),
+        ])
+//        view.snp.makeConstraints { (make) in
+//            make.edges.equalTo(parent)
+//        }
         
         view.show(animated: true)
     }
@@ -109,10 +116,17 @@ class PromptCommonPopupView: UIView, Modal {
             view.cancelButton.layer.cornerRadius = 12
             view.cancelButton.layer.maskedCorners = [.layerMinXMaxYCorner]
             view.cancelAction = cancelAction
+            view.translatesAutoresizingMaskIntoConstraints = false
             parent.addSubview(view)
-            view.snp.makeConstraints { (make) in
-                make.edges.equalTo(parent)
-            }
+            NSLayoutConstraint.activate([
+                view.topAnchor.constraint(equalTo: parent.topAnchor),
+                view.bottomAnchor.constraint(equalTo: parent.bottomAnchor),
+                view.leftAnchor.constraint(equalTo: parent.leftAnchor),
+                view.rightAnchor.constraint(equalTo: parent.rightAnchor),
+            ])
+//            view.snp.makeConstraints { (make) in
+//                make.edges.equalTo(parent)
+//            }
             
             view.show(animated: true)
         }

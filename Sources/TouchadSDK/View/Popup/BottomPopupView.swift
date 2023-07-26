@@ -52,10 +52,17 @@ class BottomPopupView: UIView {
             view.confirmButton.isEnabled = false
         }
         
+        view.translatesAutoresizingMaskIntoConstraints = false
         parent.addSubview(view)
-        view.snp.makeConstraints { (make) in
-            make.edges.equalTo(parent)
-        }
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: parent.topAnchor),
+            view.bottomAnchor.constraint(equalTo: parent.bottomAnchor),
+            view.leftAnchor.constraint(equalTo: parent.leftAnchor),
+            view.rightAnchor.constraint(equalTo: parent.rightAnchor),
+        ])
+//        view.snp.makeConstraints { (make) in
+//            make.edges.equalTo(parent)
+//        }
         
         view.popupView.frame.origin.y = view.frame.size.height
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut,  animations: {

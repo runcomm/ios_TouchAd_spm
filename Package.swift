@@ -21,9 +21,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "TouchadSDK",
-            dependencies: ["Alamofire"]),
+            dependencies: ["Alamofire"],
+            resources: [.process("Resources")]),
         .testTarget(
             name: "TouchadSDKTests",
-            dependencies: ["TouchadSDK","Alamofire"]),
+            dependencies: ["TouchadSDK","Alamofire"],
+            resources: [.process("Resources")),
     ]
 )

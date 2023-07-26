@@ -10,7 +10,7 @@ import UIKit
 
 class TAConstants: NSObject {
     
-    static let SDK_BUNDLE_IDENTIFIER = "TouchadSDK"
+    static let SDK_BUNDLE_IDENTIFIER = "TouchadSDK_TouchadSDK"
     
     static let SDK_VERSION = "1.2"
     

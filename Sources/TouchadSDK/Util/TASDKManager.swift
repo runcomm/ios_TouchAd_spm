@@ -91,7 +91,7 @@ import Foundation
         TAGlobalManager.platformId = TAConstants.PLATFORM_ID_TODAY_EARNING
         
         if let vc = TAUtil.getNavigationController()?.visibleViewController {
-        
+            
             let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
             let wvc = CommonWebViewController(nibName: "CommonWebViewController", bundle: bundle)
             wvc.titleName = "TOUCH AD"

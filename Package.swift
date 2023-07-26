@@ -26,6 +26,6 @@ let package = Package(
         .testTarget(
             name: "TouchadSDKTests",
             dependencies: ["TouchadSDK","Alamofire"],
-            resources: [.process("Resources")),
+            resources: [.process("Resources")]),
     ]
 )

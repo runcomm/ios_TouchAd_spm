@@ -22,10 +22,10 @@ let package = Package(
         .target(
             name: "TouchadSDK",
             dependencies: ["Alamofire"],
-            resources: [.process("Resources")]),
+            resources: [.process("ViewController/CommonWeb/CommonWebViewController.xib")]),
         .testTarget(
             name: "TouchadSDKTests",
-            dependencies: ["TouchadSDK","Alamofire"],
-            resources: [.process("Resources")]),
+            dependencies: ["TouchadSDK","Alamofire"]
+        ),
     ]
 )

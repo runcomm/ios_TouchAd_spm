@@ -24,11 +24,14 @@ class PromptCommonPopupView: UIView, Modal {
     class func createView(_ parent: UIView, title: String, text: String = "", textAlign: NSTextAlignment = .left, confirmText: String? = TAConstants.COMMON_CONFIRM_TITLE, confirmAction: (() -> Void)? = nil, cancelText: String? = TAConstants.COMMON_CANCEL_TITLE, cancelAction: (() -> Void)? = nil) {
         //guard let view = Bundle.main.loadNibNamed("PromptCommonPopupView", owner: parent)?[0] as?
         let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
-        guard let view = bundle?.loadNibNamed("PromptCommonPopupView", owner: parent, options: nil)?[0] as? PromptCommonPopupView else {
+        guard let view = Bundle.module.loadNibNamed("PromptCommonPopupView", owner: parent, options: nil)?[0] as? PromptCommonPopupView else {
             printd("fail to load view")
             return
         }
-        
+//        guard let view = bundle?.loadNibNamed("PromptCommonPopupView", owner: parent, options: nil)?[0] as? PromptCommonPopupView else {
+//            printd("fail to load view")
+//            return
+//        }
         view.backgroundView = view
         view.dialogView = view.popupView
         view.titleLabel.text = title

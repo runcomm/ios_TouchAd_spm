@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PromptCommonPopupView" customModule="TouchadSDK"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PromptCommonPopupView" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="jIF-qT-6lx" customClass="PromptCommonPopupView" customModule="TouchadSDK" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>

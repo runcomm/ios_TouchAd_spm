@@ -111,7 +111,7 @@ import Foundation
         if let vc = TAUtil.getNavigationController()?.visibleViewController {
             
             let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
-            let wvc = CommonWebViewController(nibName: "CommonWebViewController", bundle: bundle)
+            let wvc = CommonWebViewController(nibName: "CommonWebViewController", bundle: Bundle.module)
             wvc.titleName = "TOUCH AD"
             wvc.url = TAConstants.WEBURL_TODAY_BANNER_VIEW
             vc.navigationController?.pushViewController(wvc, animated: true)
@@ -129,7 +129,7 @@ import Foundation
         if let vc = TAUtil.getNavigationController()?.visibleViewController {
             
             let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
-            let wvc = CommonWebViewController(nibName: "CommonWebViewController", bundle: bundle)
+            let wvc = CommonWebViewController(nibName: "CommonWebViewController", bundle: Bundle.module)
             wvc.titleName = "TOUCH AD"
             wvc.url = TAConstants.WEBURL_TODAY_MAIN_VIEW
             vc.navigationController?.pushViewController(wvc, animated: true)

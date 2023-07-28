@@ -23,7 +23,7 @@ class CommonPickerPopupView: UIView, UIPickerViewDataSource, UIPickerViewDelegat
     class func createView(_ parent: UIView, list: [String], selectIndex: Int? = 0, addAction: (() -> Void)? = nil, confirmAction: ((Int) -> Void)? = nil, cancelAction: (() -> Void)? = nil) {
         //guard let view = Bundle.main.loadNibNamed("CommonPickerPopupView", owner: parent)?[0] as?
         let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
-        guard let view = bundle?.loadNibNamed("CommonPickerPopupView", owner: parent, options: nil)?[0] as?        CommonPickerPopupView else {
+        guard let view = Bundle.module.loadNibNamed("CommonPickerPopupView", owner: parent, options: nil)?[0] as?        CommonPickerPopupView else {
             printd("fail to load view")
             return
         }
@@ -61,7 +61,7 @@ class CommonPickerPopupView: UIView, UIPickerViewDataSource, UIPickerViewDelegat
     class func createView(_ parent: UIView, list: [String], selectIndex: Int? = 0, confirmAction: ((Int) -> Void)? = nil) {
         //guard let view = Bundle.main.loadNibNamed("CommonPickerPopupView", owner: parent)?[0] as?
         let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
-        guard let view = bundle?.loadNibNamed("CommonPickerPopupView", owner: parent, options: nil)?[0] as? CommonPickerPopupView else {
+        guard let view = Bundle.module.loadNibNamed("CommonPickerPopupView", owner: parent, options: nil)?[0] as? CommonPickerPopupView else {
             printd("fail to load view")
             return
         }

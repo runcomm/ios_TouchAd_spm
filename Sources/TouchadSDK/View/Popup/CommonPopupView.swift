@@ -22,7 +22,7 @@ class CommonPopupView: UIView, Modal {
     class func createView(_ parent: UIView, title: String, text: String = "", attributeText: NSAttributedString = NSAttributedString(string: ""), textAlign: NSTextAlignment = .left, confirmText: String? = TAConstants.COMMON_CONFIRM_TITLE, confirmAction: (() -> Void)? = nil) {
         let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
         //guard let view = Bundle.main.loadNibNamed("CommonPopupView", owner: parent)?[0] as?
-        guard let view = bundle?.loadNibNamed("CommonPopupView", owner: parent, options: nil)?[0] as? CommonPopupView else {
+        guard let view = Bundle.module.loadNibNamed("CommonPopupView", owner: parent, options: nil)?[0] as? CommonPopupView else {
             printd("fail to load view")
             return
         }

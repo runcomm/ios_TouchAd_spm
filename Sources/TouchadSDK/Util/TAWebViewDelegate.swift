@@ -151,7 +151,7 @@ class TAWebViewDelegate: NSObject, WKUIDelegate, WKNavigationDelegate {
             else
             {
                 let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
-                let evc = ErrorViewController(nibName: "ErrorViewController", bundle: bundle)
+                let evc = ErrorViewController(nibName: "ErrorViewController", bundle: Bundle.module)
                 evc.errorCode = "-1009"
                 viewController.navigationController?.pushViewController(evc, animated: false)
             }

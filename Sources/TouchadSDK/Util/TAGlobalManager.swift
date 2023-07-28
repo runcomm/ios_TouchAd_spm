@@ -344,7 +344,7 @@ class TAGlobalManager: NSObject {
                                     pvc.openerViewController = parent
                                     parent.present(pvc, animated: false, completion: nil)*/
                                     
-                                    let cvc = PopupWebViewController(nibName: "PopupWebViewController", bundle: bundle)
+                                    let cvc = PopupWebViewController(nibName: "PopupWebViewController", bundle: Bundle.module)
                                     //cvc.titleName = "TOUCHAD"
                                     cvc.url = url
                                     //pvc.transitioningDelegate = parent as! UIViewControllerTransitioningDelegate
@@ -355,7 +355,7 @@ class TAGlobalManager: NSObject {
                                 else if parent is CommonWebViewController
                                 {
                                     let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
-                                    let cvc = CommonWebViewController(nibName: "CommonWebViewController", bundle: bundle)
+                                    let cvc = CommonWebViewController(nibName: "CommonWebViewController", bundle: Bundle.module)
                                     cvc.titleName = "TOUCHAD"
                                     cvc.url = url
                                     //pvc.transitioningDelegate = parent as! UIViewControllerTransitioningDelegate
@@ -701,7 +701,7 @@ class TAGlobalManager: NSObject {
                 if let url = deepLink?.replacingOccurrences(of: TAConstants.DEEPLINK_PREFIX + "://", with: "https://").replacingOccurrences(of: TAConstants.REAL_SERVER_BASE_URL, with: TAConstants.DEV_SERVER_BASE_URL)
                 {
                     let bundle = Bundle(identifier: TAConstants.SDK_BUNDLE_IDENTIFIER)
-                    let vc = PopupWebViewController(nibName: "PopupWebViewController", bundle: bundle)
+                    let vc = PopupWebViewController(nibName: "PopupWebViewController", bundle: Bundle.module)
                     vc.url = url
                     //vc.modalPresentationStyle = .overFullScreen
                     /*

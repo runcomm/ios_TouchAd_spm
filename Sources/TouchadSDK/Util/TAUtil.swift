@@ -1020,49 +1020,49 @@ extension UIView {
         }
     }
     
-    @IBInspectable var shadowColor: UIColor? {
-        get {
-            if let color = layer.shadowColor {
-                return UIColor(cgColor: color)
-            }
-            return nil
-        }
-        set {
-            if let color = newValue {
-                layer.shadowColor = color.cgColor
-            } else {
-                layer.shadowColor = nil
-            }
-        }
-    }
-
-    @IBInspectable var shadowOpacity: Float {
-        get {
-            return layer.shadowOpacity
-        }
-        set {
-            layer.shadowOpacity = newValue
-        }
-    }
-
-    @IBInspectable var shadowOffset: CGPoint {
-        get {
-            return CGPoint(x: layer.shadowOffset.width, y:layer.shadowOffset.height)
-        }
-        set {
-            layer.shadowOffset = CGSize(width: newValue.x, height: newValue.y)
-        }
-
-     }
-
-    @IBInspectable var shadowBlur: CGFloat {
-        get {
-            return layer.shadowRadius
-        }
-        set {
-            layer.shadowRadius = newValue / 2.0
-        }
-    }
+//    @IBInspectable var shadowColor: UIColor? {
+//        get {
+//            if let color = layer.shadowColor {
+//                return UIColor(cgColor: color)
+//            }
+//            return nil
+//        }
+//        set {
+//            if let color = newValue {
+//                layer.shadowColor = color.cgColor
+//            } else {
+//                layer.shadowColor = nil
+//            }
+//        }
+//    }
+//
+//    @IBInspectable var shadowOpacity: Float {
+//        get {
+//            return layer.shadowOpacity
+//        }
+//        set {
+//            layer.shadowOpacity = newValue
+//        }
+//    }
+//
+//    @IBInspectable var shadowOffset: CGPoint {
+//        get {
+//            return CGPoint(x: layer.shadowOffset.width, y:layer.shadowOffset.height)
+//        }
+//        set {
+//            layer.shadowOffset = CGSize(width: newValue.x, height: newValue.y)
+//        }
+//
+//     }
+//
+//    @IBInspectable var shadowBlur: CGFloat {
+//        get {
+//            return layer.shadowRadius
+//        }
+//        set {
+//            layer.shadowRadius = newValue / 2.0
+//        }
+//    }
     
     // 실선 컬러, 두께, 패턴 추가
     func addDashedBorder(color: UIColor, lineWidth: CGFloat = 1, lineDashPattern: [NSNumber] = [5, 5]) {

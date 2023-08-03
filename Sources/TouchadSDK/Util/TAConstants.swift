@@ -12,7 +12,7 @@ class TAConstants: NSObject {
     
     static let SDK_BUNDLE_IDENTIFIER = "TouchadSDK"
     
-    static let SDK_VERSION = "1.2"
+    static let SDK_VERSION = "1.3"
     
     // 개발 서버 접속 여부
 //    static let IS_DEV = true

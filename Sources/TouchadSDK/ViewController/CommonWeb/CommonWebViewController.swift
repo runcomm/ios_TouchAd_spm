@@ -364,7 +364,7 @@ class CommonWebViewController: BaseViewController, TAWebViewInterface {
             questionButton.isHidden = false
             questionButton.setTitleColor(UIColor.rgb(71, 55, 223), for: .normal)
             titleContainerView?.isHidden = false
-            titleContainerView?.backgroundColor = .white
+            titleContainerView?.backgroundColor = UIColor.rgb(249,250,252)
             webView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 webView.topAnchor.constraint(equalTo: self.titleContainerView!.bottomAnchor),
@@ -383,7 +383,7 @@ class CommonWebViewController: BaseViewController, TAWebViewInterface {
             titleLabel?.textColor = UIColor.rgb(34,34,34)
             whiteBackButton?.isHidden = true
             blackBackButton?.isHidden = false
-            bottomBorderView?.isHidden = false
+            bottomBorderView?.isHidden = true
             exitButton?.isHidden = true
         }
         else if urlString.contains(TAConstants.WEBURL_TODAY_MONEY_VIEW) ||
@@ -473,7 +473,6 @@ class CommonWebViewController: BaseViewController, TAWebViewInterface {
             rightMenuButton.isHidden = true
             questionButton.isHidden = true
             titleContainerView?.isHidden = false
-            titleContainerView?.backgroundColor = .white
             webView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 webView.topAnchor.constraint(equalTo: self.titleContainerView!.bottomAnchor),
@@ -492,15 +491,17 @@ class CommonWebViewController: BaseViewController, TAWebViewInterface {
             titleLabel?.textColor = UIColor.rgb(34,34,34)
             whiteBackButton?.isHidden = true
             blackBackButton?.isHidden = false
-            bottomBorderView?.isHidden = false
+            bottomBorderView?.isHidden = true
             
             if urlString.contains(TAConstants.WEBURL_ADVERTISE_SELECT_CHARGING)
             {
                 exitButton?.isHidden = false
+                titleContainerView?.backgroundColor = UIColor.rgb(249,250,252)
             }
             else
             {
                 exitButton?.isHidden = true
+                titleContainerView?.backgroundColor = .white
             }
         }
         
@@ -680,7 +681,8 @@ class CommonWebViewController: BaseViewController, TAWebViewInterface {
                 }
                 else
                 {
-                    self.webView.goBackToFirstItemInHistory()
+                    self.url = TAConstants.WEBURL_TODAY_MONEY_VIEW
+                    self.goNavigationLink()
                 }
             }
             else

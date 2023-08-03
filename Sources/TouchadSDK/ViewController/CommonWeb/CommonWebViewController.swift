@@ -681,6 +681,7 @@ class CommonWebViewController: BaseViewController, TAWebViewInterface {
                 }
                 else
                 {
+                    //적립문의 백버튼 동작 오류 임시 처리 코드(머니 주소로 이동)
                     self.url = TAConstants.WEBURL_TODAY_MONEY_VIEW
                     self.goNavigationLink()
                 }

@@ -27,16 +27,8 @@ let package = Package(
 //            name: "TouchadSDKTests",
 //            dependencies: ["TouchadSDK","Alamofire"]
 //        ),
-        .target(
-            name: "TouchadSDK",
-            dependencies: []
-        ),
-        .testTarget(
-            name: "TouchadSDKTests",
-            dependencies: ["TouchadSDK"]
-        ),
         .binaryTarget(
-            name: "TouchadSDK.xcframework",
+            name: "TouchadSDK",
             path: "TouchadSDK.xcframework")
     ]
 )

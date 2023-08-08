@@ -1,0 +1,511 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TouchadSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AdSupport
+//import Alamofire
+import AppTrackingTransparency
+import CoreTelephony
+import Foundation
+import Swift
+@_exported import TouchadSDK
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+public struct MapError : Swift.Error {
+  public var key: Swift.String?
+  public var currentValue: Any?
+  public var reason: Swift.String?
+  public var file: Swift.StaticString?
+  public var function: Swift.StaticString?
+  public var line: Swift.UInt?
+  public init(key: Swift.String?, currentValue: Any?, reason: Swift.String?, file: Swift.StaticString? = nil, function: Swift.StaticString? = nil, line: Swift.UInt? = nil)
+}
+extension TouchadSDK.MapError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public func <- <T>(left: inout T, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: T, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout T?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: T?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout [T], right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: [T], right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout [T]?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: [T]?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout [Swift.String : T], right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: [Swift.String : T], right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func <- <T>(left: inout [Swift.String : T]?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+public func >>> <T>(left: [Swift.String : T]?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+extension Foundation.DateFormatter {
+  convenience public init(withFormat format: Swift.String, locale: Swift.String)
+}
+open class ISO8601DateTransform : TouchadSDK.DateFormatterTransform {
+  public init()
+  @objc deinit
+}
+public enum JWTDecodeError : Foundation.LocalizedError, Swift.CustomDebugStringConvertible {
+  case invalidBase64URL(Swift.String)
+  case invalidJSON(Swift.String)
+  case invalidPartCount(Swift.String, Swift.Int)
+  public var localizedDescription: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public protocol MapContext {
+}
+final public class Map {
+  final public let mappingType: TouchadSDK.MappingType
+  final public var JSON: [Swift.String : Any] {
+    get
+  }
+  final public var isKeyPresent: Swift.Bool {
+    get
+  }
+  final public var currentValue: Any? {
+    get
+  }
+  final public var currentKey: Swift.String? {
+    get
+  }
+  final public var nestedKeyDelimiter: Swift.String {
+    get
+  }
+  final public var context: (any TouchadSDK.MapContext)?
+  final public var shouldIncludeNilValues: Swift.Bool
+  final public let toObject: Swift.Bool
+  public init(mappingType: TouchadSDK.MappingType, JSON: [Swift.String : Any], toObject: Swift.Bool = false, context: (any TouchadSDK.MapContext)? = nil, shouldIncludeNilValues: Swift.Bool = false)
+  final public subscript(key: Swift.String) -> TouchadSDK.Map {
+    get
+  }
+  final public subscript(key: Swift.String, delimiter delimiter: Swift.String) -> TouchadSDK.Map {
+    get
+  }
+  final public subscript(key: Swift.String, nested nested: Swift.Bool) -> TouchadSDK.Map {
+    get
+  }
+  final public subscript(key: Swift.String, nested nested: Swift.Bool, delimiter delimiter: Swift.String) -> TouchadSDK.Map {
+    get
+  }
+  final public subscript(key: Swift.String, ignoreNil ignoreNil: Swift.Bool) -> TouchadSDK.Map {
+    get
+  }
+  final public subscript(key: Swift.String, delimiter delimiter: Swift.String, ignoreNil ignoreNil: Swift.Bool) -> TouchadSDK.Map {
+    get
+  }
+  final public subscript(key: Swift.String, nested nested: Swift.Bool, ignoreNil ignoreNil: Swift.Bool) -> TouchadSDK.Map {
+    get
+  }
+  final public subscript(key: Swift.String, nested nested: Swift.Bool?, delimiter delimiter: Swift.String, ignoreNil ignoreNil: Swift.Bool) -> TouchadSDK.Map {
+    get
+  }
+  final public func value<T>() -> T?
+  @objc deinit
+}
+extension TouchadSDK.Map {
+  final public func value<T>(_ key: Swift.String, default: T.Object, using transform: T) throws -> T.Object where T : TouchadSDK.TransformType
+  final public func value<T>(_ key: Swift.String, default: T) throws -> T
+  final public func value<T>(_ key: Swift.String, default: [T]) -> [T] where T : TouchadSDK.BaseMappable
+  final public func value<T>(_ key: Swift.String, default: T) throws -> T where T : TouchadSDK.BaseMappable
+}
+open class NSDecimalNumberTransform : TouchadSDK.TransformType {
+  public typealias Object = Foundation.NSDecimalNumber
+  public typealias JSON = Swift.String
+  public init()
+  open func transformFromJSON(_ value: Any?) -> Foundation.NSDecimalNumber?
+  open func transformToJSON(_ value: Foundation.NSDecimalNumber?) -> Swift.String?
+  @objc deinit
+}
+public func decode(jwt: Swift.String) throws -> any TouchadSDK.JWT
+public struct Claim {
+  public var rawValue: Any? {
+    get
+  }
+  public var string: Swift.String? {
+    get
+  }
+  public var boolean: Swift.Bool? {
+    get
+  }
+  public var double: Swift.Double? {
+    get
+  }
+  public var integer: Swift.Int? {
+    get
+  }
+  public var date: Foundation.Date? {
+    get
+  }
+  public var array: [Swift.String]? {
+    get
+  }
+}
+public func <- <T>(left: inout T, right: TouchadSDK.Map) where T : Swift.SignedInteger
+public func <- <T>(left: inout T?, right: TouchadSDK.Map) where T : Swift.SignedInteger
+public func <- <T>(left: inout T, right: TouchadSDK.Map) where T : Swift.UnsignedInteger
+public func <- <T>(left: inout T?, right: TouchadSDK.Map) where T : Swift.UnsignedInteger
+open class TransformOf<ObjectType, JSONType> : TouchadSDK.TransformType {
+  public typealias Object = ObjectType
+  public typealias JSON = JSONType
+  public init(fromJSON: @escaping (JSONType?) -> ObjectType?, toJSON: @escaping (ObjectType?) -> JSONType?)
+  open func transformFromJSON(_ value: Any?) -> ObjectType?
+  open func transformToJSON(_ value: ObjectType?) -> JSONType?
+  @objc deinit
+}
+open class DateTransform : TouchadSDK.TransformType {
+  public typealias Object = Foundation.Date
+  public typealias JSON = Swift.Double
+  public enum Unit : Foundation.TimeInterval {
+    case seconds
+    case milliseconds
+    public init?(rawValue: Foundation.TimeInterval)
+    public typealias RawValue = Foundation.TimeInterval
+    public var rawValue: Foundation.TimeInterval {
+      get
+    }
+  }
+  public init(unit: TouchadSDK.DateTransform.Unit = .seconds)
+  open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  open func transformToJSON(_ value: Foundation.Date?) -> Swift.Double?
+  @objc deinit
+}
+infix operator <- : DefaultPrecedence
+infix operator >>> : DefaultPrecedence
+public func <- <T>(left: inout T, right: TouchadSDK.Map)
+public func >>> <T>(left: T, right: TouchadSDK.Map)
+public func <- <T>(left: inout T?, right: TouchadSDK.Map)
+public func >>> <T>(left: T?, right: TouchadSDK.Map)
+public func <- <T>(left: inout T, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: T, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout T?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: T?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Dictionary<Swift.String, T>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Dictionary<Swift.String, T>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Dictionary<Swift.String, T>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Dictionary<Swift.String, T>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Dictionary<Swift.String, [T]>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Dictionary<Swift.String, [T]>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Dictionary<Swift.String, [T]>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Dictionary<Swift.String, [T]>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Array<T>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Array<T>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Array<T>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Array<T>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Array<Swift.Array<T>>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Array<Swift.Array<T>>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Array<Swift.Array<T>>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Array<Swift.Array<T>>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Set<T>, right: TouchadSDK.Map) where T : Swift.Hashable, T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Set<T>, right: TouchadSDK.Map) where T : Swift.Hashable, T : TouchadSDK.BaseMappable
+public func <- <T>(left: inout Swift.Set<T>?, right: TouchadSDK.Map) where T : Swift.Hashable, T : TouchadSDK.BaseMappable
+public func >>> <T>(left: Swift.Set<T>?, right: TouchadSDK.Map) where T : Swift.Hashable, T : TouchadSDK.BaseMappable
+public enum MappingType {
+  case fromJSON
+  case toJSON
+  public static func == (a: TouchadSDK.MappingType, b: TouchadSDK.MappingType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+final public class Mapper<N> where N : TouchadSDK.BaseMappable {
+  final public var context: (any TouchadSDK.MapContext)?
+  final public var shouldIncludeNilValues: Swift.Bool
+  public init(context: (any TouchadSDK.MapContext)? = nil, shouldIncludeNilValues: Swift.Bool = false)
+  final public func map(JSONObject: Any?, toObject object: N) -> N
+  final public func map(JSONString: Swift.String, toObject object: N) -> N
+  final public func map(JSON: [Swift.String : Any], toObject object: N) -> N
+  final public func map(JSONString: Swift.String) -> N?
+  final public func map(JSONObject: Any?) -> N?
+  final public func map(JSON: [Swift.String : Any]) -> N?
+  final public func mapArray(JSONString: Swift.String) -> [N]?
+  final public func mapArray(JSONObject: Any?) -> [N]?
+  final public func mapArray(JSONArray: [[Swift.String : Any]]) -> [N]
+  final public func mapDictionary(JSONString: Swift.String) -> [Swift.String : N]?
+  final public func mapDictionary(JSONObject: Any?) -> [Swift.String : N]?
+  final public func mapDictionary(JSON: [Swift.String : [Swift.String : Any]]) -> [Swift.String : N]?
+  final public func mapDictionary(JSONObject: Any?, toDictionary dictionary: [Swift.String : N]) -> [Swift.String : N]
+  final public func mapDictionary(JSON: [Swift.String : [Swift.String : Any]], toDictionary dictionary: [Swift.String : N]) -> [Swift.String : N]
+  final public func mapDictionaryOfArrays(JSONObject: Any?) -> [Swift.String : [N]]?
+  final public func mapDictionaryOfArrays(JSON: [Swift.String : [[Swift.String : Any]]]) -> [Swift.String : [N]]?
+  final public func mapArrayOfArrays(JSONObject: Any?) -> [[N]]?
+  public static func parseJSONStringIntoDictionary(JSONString: Swift.String) -> [Swift.String : Any]?
+  public static func parseJSONString(JSONString: Swift.String) -> Any?
+  @objc deinit
+}
+extension TouchadSDK.Mapper {
+  final public func map(JSONfile: Swift.String) -> N?
+  final public func mapArray(JSONfile: Swift.String) -> [N]?
+}
+extension TouchadSDK.Mapper {
+  final public func toJSON(_ object: N) -> [Swift.String : Any]
+  final public func toJSONArray(_ array: [N]) -> [[Swift.String : Any]]
+  final public func toJSONDictionary(_ dictionary: [Swift.String : N]) -> [Swift.String : [Swift.String : Any]]
+  final public func toJSONDictionaryOfArrays(_ dictionary: [Swift.String : [N]]) -> [Swift.String : [[Swift.String : Any]]]
+  final public func toJSONString(_ object: N, prettyPrint: Swift.Bool = false) -> Swift.String?
+  final public func toJSONString(_ array: [N], prettyPrint: Swift.Bool = false) -> Swift.String?
+  public static func toJSONString(_ JSONObject: Any, prettyPrint: Swift.Bool) -> Swift.String?
+  public static func toJSONData(_ JSONObject: Any, options: Foundation.JSONSerialization.WritingOptions) -> Foundation.Data?
+}
+extension TouchadSDK.Mapper where N : Swift.Hashable {
+  final public func mapSet(JSONString: Swift.String) -> Swift.Set<N>?
+  final public func mapSet(JSONObject: Any?) -> Swift.Set<N>?
+  final public func mapSet(JSONArray: [[Swift.String : Any]]) -> Swift.Set<N>
+  final public func toJSONSet(_ set: Swift.Set<N>) -> [[Swift.String : Any]]
+  final public func toJSONString(_ set: Swift.Set<N>, prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+open class DateFormatterTransform : TouchadSDK.TransformType {
+  public typealias Object = Foundation.Date
+  public typealias JSON = Swift.String
+  final public let dateFormatter: Foundation.DateFormatter
+  public init(dateFormatter: Foundation.DateFormatter)
+  open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  open func transformToJSON(_ value: Foundation.Date?) -> Swift.String?
+  @objc deinit
+}
+open class EnumTransform<T> : TouchadSDK.TransformType where T : Swift.RawRepresentable {
+  public typealias Object = T
+  public typealias JSON = T.RawValue
+  public init()
+  open func transformFromJSON(_ value: Any?) -> T?
+  open func transformToJSON(_ value: T?) -> T.RawValue?
+  @objc deinit
+}
+public protocol TransformType {
+  associatedtype Object
+  associatedtype JSON
+  func transformFromJSON(_ value: Any?) -> Self.Object?
+  func transformToJSON(_ value: Self.Object?) -> Self.JSON?
+}
+open class URLTransform : TouchadSDK.TransformType {
+  public typealias Object = Foundation.URL
+  public typealias JSON = Swift.String
+  public init(shouldEncodeURLString: Swift.Bool = false, allowedCharacterSet: Foundation.CharacterSet = .urlQueryAllowed)
+  open func transformFromJSON(_ value: Any?) -> Foundation.URL?
+  open func transformToJSON(_ value: Foundation.URL?) -> Swift.String?
+  @objc deinit
+}
+open class CustomDateFormatTransform : TouchadSDK.DateFormatterTransform {
+  public init(formatString: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class TASDKManager : ObjectiveC.NSObject {
+  public static var mbrId: Swift.String {
+    get
+  }
+  public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String)
+  public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String, pushToken: Swift.String?)
+  @objc public static func openBCPlusMoneyMenu(_ isProd: Swift.Bool, _ mbrId: Swift.String)
+  @objc public static func openBCPlusBannerMenu(_ isProd: Swift.Bool, _ mbrId: Swift.String)
+  @objc public static func openBCPlusMainMenu(_ isProd: Swift.Bool, _ mbrId: Swift.String)
+  @objc public static func openBCSettingMenu()
+  @objc override dynamic public init()
+  @objc deinit
+}
+open class DataTransform : TouchadSDK.TransformType {
+  public typealias Object = Foundation.Data
+  public typealias JSON = Swift.String
+  public init()
+  open func transformFromJSON(_ value: Any?) -> Foundation.Data?
+  open func transformToJSON(_ value: Foundation.Data?) -> Swift.String?
+  @objc deinit
+}
+public protocol ImmutableMappable : TouchadSDK.BaseMappable {
+  init(map: TouchadSDK.Map) throws
+}
+extension TouchadSDK.ImmutableMappable {
+  public func mapping(map: TouchadSDK.Map)
+  public init(JSONString: Swift.String, context: (any TouchadSDK.MapContext)? = nil) throws
+  public init(JSON: [Swift.String : Any], context: (any TouchadSDK.MapContext)? = nil) throws
+  public init(JSONObject: Any, context: (any TouchadSDK.MapContext)? = nil) throws
+}
+extension TouchadSDK.Map {
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T
+  final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> Transform.Object where Transform : TouchadSDK.TransformType
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T where T : Swift.RawRepresentable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T? where T : Swift.RawRepresentable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T] where T : Swift.RawRepresentable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T]? where T : Swift.RawRepresentable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T where T : TouchadSDK.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T? where T : TouchadSDK.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T] where T : TouchadSDK.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T]? where T : TouchadSDK.BaseMappable
+  final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Transform.Object] where Transform : TouchadSDK.TransformType
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Swift.String : T] where T : TouchadSDK.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Swift.String : T]? where T : TouchadSDK.BaseMappable
+  final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Swift.String : Transform.Object] where Transform : TouchadSDK.TransformType
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [[T]]? where T : TouchadSDK.BaseMappable
+  final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [[T]] where T : TouchadSDK.BaseMappable
+  final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [[Transform.Object]] where Transform : TouchadSDK.TransformType
+}
+extension TouchadSDK.Mapper where N : TouchadSDK.ImmutableMappable {
+  final public func map(JSON: [Swift.String : Any]) throws -> N
+  final public func map(JSONString: Swift.String) throws -> N
+  final public func map(JSONObject: Any) throws -> N
+  final public func mapArray(JSONArray: [[Swift.String : Any]]) throws -> [N]
+  final public func mapArray(JSONString: Swift.String) throws -> [N]
+  final public func mapArray(JSONObject: Any) throws -> [N]
+  final public func mapDictionary(JSONString: Swift.String) throws -> [Swift.String : N]
+  final public func mapDictionary(JSONObject: Any?) throws -> [Swift.String : N]
+  final public func mapDictionary(JSON: [Swift.String : [Swift.String : Any]]) throws -> [Swift.String : N]
+  final public func mapDictionaryOfArrays(JSONObject: Any?) throws -> [Swift.String : [N]]
+  final public func mapDictionaryOfArrays(JSON: [Swift.String : [[Swift.String : Any]]]) throws -> [Swift.String : [N]]
+  final public func mapArrayOfArrays(JSONObject: Any?) throws -> [[N]]
+}
+open class HexColorTransform : TouchadSDK.TransformType {
+  public typealias Object = UIKit.UIColor
+  public typealias JSON = Swift.String
+  public init(prefixToJSON: Swift.Bool = false, alphaToJSON: Swift.Bool = false)
+  open func transformFromJSON(_ value: Any?) -> TouchadSDK.HexColorTransform.Object?
+  open func transformToJSON(_ value: TouchadSDK.HexColorTransform.Object?) -> TouchadSDK.HexColorTransform.JSON?
+  @objc deinit
+}
+public struct DictionaryTransform<Key, Value> : TouchadSDK.TransformType where Key : Swift.Hashable, Key : Swift.RawRepresentable, Value : TouchadSDK.Mappable, Key.RawValue == Swift.String {
+  public init()
+  public func transformFromJSON(_ value: Any?) -> [Key : Value]?
+  public func transformToJSON(_ value: [Key : Value]?) -> Any?
+  public typealias JSON = Any
+  public typealias Object = [Key : Value]
+}
+public protocol JWT {
+  var header: [Swift.String : Any] { get }
+  var body: [Swift.String : Any] { get }
+  var signature: Swift.String? { get }
+  var string: Swift.String { get }
+  var expiresAt: Foundation.Date? { get }
+  var issuer: Swift.String? { get }
+  var subject: Swift.String? { get }
+  var audience: [Swift.String]? { get }
+  var issuedAt: Foundation.Date? { get }
+  var notBefore: Foundation.Date? { get }
+  var identifier: Swift.String? { get }
+  var expired: Swift.Bool { get }
+}
+extension TouchadSDK.JWT {
+  public func claim(name: Swift.String) -> TouchadSDK.Claim
+  public subscript(claim: Swift.String) -> TouchadSDK.Claim {
+    get
+  }
+}
+public func printd(_ item: Any, function: Swift.String = #function, file: Swift.String = #file, line: Swift.Int = #line)
+extension UIKit.UIDatePicker {
+  @_Concurrency.MainActor(unsafe) public var clampedDate: Foundation.Date {
+    get
+  }
+}
+extension UIKit.UIWindow {
+  public var visibleViewController: UIKit.UIViewController? {
+    get
+  }
+  public func visibleViewControllerFrom(vc: UIKit.UIViewController? = UIApplication.shared.windows.first?.rootViewController) -> UIKit.UIViewController?
+}
+open class CodableTransform<T> : TouchadSDK.TransformType where T : Swift.Decodable, T : Swift.Encodable {
+  public typealias Object = T
+  public typealias JSON = Any
+  public init()
+  open func transformFromJSON(_ value: Any?) -> TouchadSDK.CodableTransform<T>.Object?
+  open func transformToJSON(_ value: T?) -> Any?
+  @objc deinit
+}
+public protocol BaseMappable {
+  mutating func mapping(map: TouchadSDK.Map)
+}
+public protocol Mappable : TouchadSDK.BaseMappable {
+  init?(map: TouchadSDK.Map)
+}
+public protocol StaticMappable : TouchadSDK.BaseMappable {
+  static func objectForMapping(map: TouchadSDK.Map) -> (any TouchadSDK.BaseMappable)?
+}
+extension TouchadSDK.Mappable {
+  public init?(JSONString: Swift.String, context: (any TouchadSDK.MapContext)? = nil)
+  public init?(JSON: [Swift.String : Any], context: (any TouchadSDK.MapContext)? = nil)
+}
+extension TouchadSDK.BaseMappable {
+  public func toJSON() -> [Swift.String : Any]
+  public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+extension Swift.Array where Element : TouchadSDK.BaseMappable {
+  public init?(JSONString: Swift.String, context: (any TouchadSDK.MapContext)? = nil)
+  public init(JSONArray: [[Swift.String : Any]], context: (any TouchadSDK.MapContext)? = nil)
+  public func toJSON() -> [[Swift.String : Any]]
+  public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+extension Swift.Set where Element : TouchadSDK.BaseMappable {
+  public init?(JSONString: Swift.String, context: (any TouchadSDK.MapContext)? = nil)
+  public init?(JSONArray: [[Swift.String : Any]], context: (any TouchadSDK.MapContext)? = nil)
+  public func toJSON() -> [[Swift.String : Any]]
+  public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+@objc @_inheritsConvenienceInitializers public class GeoTransPoint : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  public init(_ x: Swift.Double, _ y: Swift.Double)
+  public func GeoTransPoint(_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double)
+  public func getX() -> Swift.Double
+  public func getY() -> Swift.Double
+  @objc deinit
+}
+public class GeoTrans {
+  public static var GEO: Swift.Int
+  public static var KATEC: Swift.Int
+  public static var TM: Swift.Int
+  public static var GRS80: Swift.Int
+  public init()
+  public func convert(_ srctype: Swift.Int, _ dsttype: Swift.Int, _ in_pt: TouchadSDK.GeoTransPoint) -> TouchadSDK.GeoTransPoint
+  public static func geo2tm(_ dsttype: Swift.Int, _ in_pt: TouchadSDK.GeoTransPoint, _ out_pt: TouchadSDK.GeoTransPoint)
+  public static func tm2geo(_ srctype: Swift.Int, _ in_pt: TouchadSDK.GeoTransPoint, _ out_pt: TouchadSDK.GeoTransPoint)
+  public static func getDistancebyGeo(_ pt1: TouchadSDK.GeoTransPoint, _ pt2: TouchadSDK.GeoTransPoint) -> Swift.Double
+  public static func getDistancebyKatec(_ pt1: TouchadSDK.GeoTransPoint, _ pt2: TouchadSDK.GeoTransPoint) -> Swift.Double
+  public static func getDistancebyTm(_ pt1: TouchadSDK.GeoTransPoint, _ pt2: TouchadSDK.GeoTransPoint) -> Swift.Double
+  public static func getTimebyMin(_ distance: Swift.Double) -> Swift.Int
+  @objc deinit
+}
+public func <- <Transform>(left: inout Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func >>> <Transform>(left: Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func <- <Transform>(left: inout Transform.Object?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func >>> <Transform>(left: Transform.Object?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func <- <Transform>(left: inout [Transform.Object], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func >>> <Transform>(left: [Transform.Object], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func <- <Transform>(left: inout [Transform.Object]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func >>> <Transform>(left: [Transform.Object]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func <- <Transform>(left: inout [Swift.String : Transform.Object], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func >>> <Transform>(left: [Swift.String : Transform.Object], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func <- <Transform>(left: inout [Swift.String : Transform.Object]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func >>> <Transform>(left: [Swift.String : Transform.Object]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func <- <Transform>(left: inout Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func <- <Transform>(left: inout Transform.Object?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Transform.Object?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Swift.Dictionary<Swift.String, Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Swift.Dictionary<Swift.String, Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, [Transform.Object]>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Swift.Dictionary<Swift.String, [Transform.Object]>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, [Transform.Object]>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Swift.Dictionary<Swift.String, [Transform.Object]>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func <- <Transform>(left: inout Swift.Array<Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Swift.Array<Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func <- <Transform>(left: inout Swift.Array<Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Swift.Array<Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+public func <- <Transform>(left: inout [[Transform.Object]], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func >>> <Transform>(left: [[Transform.Object]], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func <- <Transform>(left: inout [[Transform.Object]]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func >>> <Transform>(left: [[Transform.Object]]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+public func <- <Transform>(left: inout Swift.Set<Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : Swift.Hashable, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Swift.Set<Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : Swift.Hashable, Transform.Object : TouchadSDK.BaseMappable
+public func <- <Transform>(left: inout Swift.Set<Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : Swift.Hashable, Transform.Object : TouchadSDK.BaseMappable
+public func >>> <Transform>(left: Swift.Set<Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : Swift.Hashable, Transform.Object : TouchadSDK.BaseMappable
+extension TouchadSDK.DateTransform.Unit : Swift.Equatable {}
+extension TouchadSDK.DateTransform.Unit : Swift.Hashable {}
+extension TouchadSDK.DateTransform.Unit : Swift.RawRepresentable {}
+extension TouchadSDK.MappingType : Swift.Equatable {}
+extension TouchadSDK.MappingType : Swift.Hashable {}

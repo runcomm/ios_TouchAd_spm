@@ -29,6 +29,10 @@ let package = Package(
 //        ),
         .binaryTarget(
             name: "TouchadSDK",
-            path: "TouchadSDK.xcframework")
+            path: "TouchadSDK.xcframework"
+        ),
+        .binaryTarget(
+            name: "Alamofire",
+            path: "Alamofire.xcframework")
     ]
 )

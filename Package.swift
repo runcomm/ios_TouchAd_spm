@@ -33,6 +33,6 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Alamofire",
-            path: "Alamofire.xcframework")
+            path: "Alamofire.framework")
     ]
 )

@@ -403,10 +403,10 @@ extension UIKit.UIDatePicker {
   }
 }
 extension UIKit.UIWindow {
-  public var visibleViewController: UIKit.UIViewController? {
+  @_Concurrency.MainActor(unsafe) public var visibleViewController: UIKit.UIViewController? {
     get
   }
-  public func visibleViewControllerFrom(vc: UIKit.UIViewController? = UIApplication.shared.windows.first?.rootViewController) -> UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) public func visibleViewControllerFrom(vc: UIKit.UIViewController? = UIApplication.shared.windows.first?.rootViewController) -> UIKit.UIViewController?
 }
 open class CodableTransform<T> : TouchadSDK.TransformType where T : Swift.Decodable, T : Swift.Encodable {
   public typealias Object = T

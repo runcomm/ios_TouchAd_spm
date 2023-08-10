@@ -4,7 +4,7 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AdSupport
-import Alamofire
+//import Alamofire
 import AppTrackingTransparency
 import CoreTelephony
 import Foundation

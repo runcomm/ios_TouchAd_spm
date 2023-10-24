@@ -728,6 +728,7 @@ class TAGlobalManager: NSObject {
         let thirdString = NSAttributedString(string: TAConstants.IDFA_ALERT_MESSAGE_REGULAR_2)
 
         firstString.append(secondString)
+        firstString.append(thirdString)
         
         PromptCommonPopupView.createView(parent.view, title: TAConstants.COMMON_POPUP_TITLE, attributeText: firstString, confirmText: TAConstants.COMMON_SETTING_TITLE, confirmAction: confirmAction, cancelText: TAConstants.COMMON_EXIT_TITLE, cancelAction: cancelAction)
     }

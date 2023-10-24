@@ -12,7 +12,7 @@ class TAConstants: NSObject {
     
     static let SDK_BUNDLE_IDENTIFIER = "TouchadSDK"
     
-    static let SDK_VERSION = "1.3"
+    static let SDK_VERSION = "1.4"
     
     // 개발 서버 접속 여부
 //    static let IS_DEV = true
@@ -77,7 +77,8 @@ class TAConstants: NSObject {
     //광고아이디
     static let IDFA_EARNING_MENU = "플러스적립"
     static let IDFA_ALERT_MESSAGE_BOLD = "을 위해 아래의 '설정'을 선택하여 '추적 허용' 옵션을 활성화 한 후, 다시 시도해주세요."
-    static let IDFA_ALERT_MESSAGE_REGULAR = "\n\n설정 > BC페이북에서  '추적허용' 항목을 탭하면 팝업이 노출되며, 해당 팝업에서 '허용'을 선택하시면 됩니다."
+    static let IDFA_ALERT_MESSAGE_REGULAR_1 = "\n\n※ 설정 > 페이북/ISP에서 ‘추적허용’ 항목을 탭하면 팝업이 노출되며, 해당 팝업에서 ‘허용’을 선택하시면 됩니다."
+    static let IDFA_ALERT_MESSAGE_REGULAR_2 = "\n\n※ 설정 > 개인정보 보호 및 보안 > 추적 선택 후 페이북/IPS 우측 버튼을 활성화로 변경하시면 됩니다."
     
     // Universal Link Domain
     static let UNIVERSAL_LINK_DOMAIN = "ta.runcomm.co.kr"

@@ -52,9 +52,8 @@ class CommonWebViewController: BaseViewController, TAWebViewInterface {
         observer = NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) {
             [unowned self] notification in
             // background에서 foreground로 돌아오는 경우 실행 될 코드
-            if let vc = UIApplication.shared.keyWindow?.visibleViewController as? UIViewController {
-
-                if let cwc = vc as? CommonWebViewController {
+            if let cwc = TAUtil.getNavigationController()?.visibleViewController as? CommonWebViewController {
+                if cwc.webView != nil {
                     if let url = cwc.webView.url,
                         url.absoluteString.contains(TAConstants.WEBURL_TODAY_MONEY_VIEW) ||
                         url.absoluteString.contains(TAConstants.WEBURL_TODAY_BANNER_VIEW) ||
@@ -128,17 +127,14 @@ class CommonWebViewController: BaseViewController, TAWebViewInterface {
         super.viewDidDisappear(animated)
         if let urlStr = url, urlStr.contains(TAConstants.WEBURL_ADVERTISE_SELECT)
         {
-            if let vc = UIApplication.shared.keyWindow?.visibleViewController as? UIViewController {
-
-                if let cwc = vc as? CommonWebViewController {
-                    if let urlStr = cwc.url
+            if let cwc = TAUtil.getNavigationController()?.visibleViewController as? CommonWebViewController {
+                if let urlStr = cwc.url
+                {
+                    if urlStr.contains(TAConstants.WEBURL_TODAY_MONEY_VIEW) ||
+                        urlStr.contains(TAConstants.WEBURL_TODAY_BANNER_VIEW) ||
+                        urlStr.contains(TAConstants.WEBURL_TODAY_MAIN_VIEW)
                     {
-                        if urlStr.contains(TAConstants.WEBURL_TODAY_MONEY_VIEW) ||
-                            urlStr.contains(TAConstants.WEBURL_TODAY_BANNER_VIEW) ||
-                            urlStr.contains(TAConstants.WEBURL_TODAY_MAIN_VIEW)
-                        {
-                            cwc.reloadWebView()
-                        }
+                        cwc.reloadWebView()
                     }
                 }
             }
@@ -614,83 +610,38 @@ class CommonWebViewController: BaseViewController, TAWebViewInterface {
         
         if let urlStr = self.webView.url?.absoluteString
         {
-            if urlStr.contains(TAConstants.WEBURL_ADVERTISE_LIST)
+            if (self.webView.canGoBack)
             {
-                TAGlobalManager.platformId = TAConstants.PLATFORM_ID_TODAY_EARNING
-                self.navigationController?.popViewController(animated: true)
-            }
-            else if urlStr.contains(TAConstants.WEBURL_TODAY_MONEY_VIEW) ||
-                    urlStr.contains(TAConstants.WEBURL_TODAY_BANNER_VIEW) ||
-                    urlStr.contains(TAConstants.WEBURL_TODAY_MAIN_VIEW)
-            {
-                self.navigationController?.popViewController(animated: true)
-            }
-            else if urlStr.contains(TAConstants.WEBURL_ADVERTISE_SELECT)
-            {
-                let script = "javascript:closeAdvertise();"
-                webView.evaluateJavaScript(script)
-                //self.navigationController?.popViewController(animated: true)
-            }
-            else if urlStr.contains(TAConstants.WEBURL_ADVERTISE_SELECT_CHARGING)
-            {
-                self.navigationController?.popViewController(animated: true)
-            }
-            else if urlStr.contains(TAConstants.WEBURL_BOARD_NOTICE_LIST)
-            {
-                if (self.navigationController != nil)
+                if urlStr.contains(TAConstants.WEBURL_TODAY_MONEY_VIEW)
                 {
-                    let vcs: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-                    
-                    if vcs.count >= 2 , let vc = vcs[vcs.count - 2] as? CommonWebViewController
-                    {
-                        if ((vc.webView.url?.absoluteString.contains(TAConstants.WEBURL_TOUCHAD_MAIN)) != nil)
-                        {
-                            self.navigationController?.popViewController(animated: true)
-                        }
-                    }
-                    else
-                    {
-                        self.url = TAConstants.WEBURL_TOUCHAD_MAIN
-                        self.goNavigationLink()
-                    }
+                    self.navigationController?.popViewController(animated: true)
                 }
                 else
-                {
-                    self.url = TAConstants.WEBURL_TOUCHAD_MAIN
-                    self.goNavigationLink()
-                }
-            }
-            else if urlStr.contains(TAConstants.WEBURL_BOARD_NOTICE_SELECT)
-            {
-                self.url = TAConstants.WEBURL_BOARD_NOTICE_LIST
-                self.goNavigationLink()
-            }
-            else if urlStr.contains(TAConstants.WEBURL_BOARD_FAQ_LIST)
-            {
-                self.webView.goBack()
-            }
-            else if urlStr.contains(TAConstants.WEBURL_BOARD_FAQ_SELECT)
-            {
-                self.webView.goBack()
-            }
-            else if urlStr.contains(TAConstants.WEBURL_INQUIRY_INSERT)
-            {
-                if (self.webView.canGoBack)
                 {
                     self.webView.goBack()
-                }
-                else
-                {
-                    //적립문의 백버튼 동작 오류 임시 처리 코드(머니 주소로 이동)
-                    self.url = TAConstants.WEBURL_TODAY_MONEY_VIEW
-                    self.goNavigationLink()
                 }
             }
             else
             {
-                if (self.webView.canGoBack)
+                if urlStr.contains(TAConstants.WEBURL_ADVERTISE_LIST)
                 {
-                    self.webView.goBackToFirstItemInHistory()
+                    TAGlobalManager.platformId = TAConstants.PLATFORM_ID_TODAY_EARNING
+                    self.navigationController?.popViewController(animated: true)
+                }
+                else if urlStr.contains(TAConstants.WEBURL_ADVERTISE_SELECT)
+                {
+                    let script = "javascript:closeAdvertise();"
+                    webView.evaluateJavaScript(script)
+                }
+                else if urlStr.contains(TAConstants.WEBURL_BOARD_NOTICE_SELECT)
+                {
+                    self.url = TAConstants.WEBURL_BOARD_NOTICE_LIST
+                    self.goNavigationLink()
+                }
+                else if urlStr.contains(TAConstants.WEBURL_INQUIRY_INSERT)
+                {
+                    self.url = TAConstants.WEBURL_TODAY_MONEY_VIEW
+                    self.goNavigationLink()
                 }
                 else
                 {

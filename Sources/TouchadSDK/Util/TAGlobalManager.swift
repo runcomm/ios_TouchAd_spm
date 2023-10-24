@@ -724,7 +724,8 @@ class TAGlobalManager: NSObject {
     class func createPromptCommonPopupView(_ parent: UIViewController, confirmAction: (() -> Void)? = nil, cancelAction: (() -> Void)? = nil) {
         let boldMessage = TAConstants.IDFA_EARNING_MENU + TAConstants.IDFA_ALERT_MESSAGE_BOLD
         let firstString = NSMutableAttributedString(string: boldMessage, attributes: [.font: UIFont.boldSystemFont(ofSize: 16)])
-        let secondString = NSAttributedString(string: TAConstants.IDFA_ALERT_MESSAGE_REGULAR)
+        let secondString = NSAttributedString(string: TAConstants.IDFA_ALERT_MESSAGE_REGULAR_1)
+        let thirdString = NSAttributedString(string: TAConstants.IDFA_ALERT_MESSAGE_REGULAR_2)
 
         firstString.append(secondString)
         

@@ -69,8 +69,8 @@ class BaseViewController: UIViewController, NetworkManagerDelegate {
         indicator.color = .gray
         indicator.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(indicator)
-        indicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-        indicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        indicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        indicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
 //        self.view.addSubview(indicator)
 //        indicator.snp.makeConstraints { (make) in
 //            make.center.equalTo(self.view.snp.center)

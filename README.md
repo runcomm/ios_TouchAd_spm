@@ -13,6 +13,7 @@
 * PROJECT 프로젝트아이콘 클릭 
 * Packages 메뉴 + 버튼 클릭
 * 팝업화면 > Github 선택 > Search or Enter Package URL > 아래주소 입력
+* TouchadSDK SPM
 ```
 https://github.com/runcomm/ios_TouchAd_spm.git
 
@@ -22,6 +23,19 @@ Version : 0.0.5
 
 Add to Project : BC앱프로젝트
 ```
+
+* Alamofire SPM
+* TouchadSDK 배포 방식이 xcframework 자체를 배포하게되어 Alamofire SPM을 추가해야합니다.
+```
+https://github.com/Alamofire/Alamofire.git
+
+Dependency Rule : Exact Version 
+
+Version : 4.9.1
+
+Add to Project : BC앱프로젝트
+```
+
 2. **Package Dependencies 확인**
 * 프로젝트 > Package Dependencies 메뉴 > Package 확인
 ```

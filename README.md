@@ -2,9 +2,6 @@
 
 * 정상적인 제휴서비스를 위한 터치애드SDK 설치과정을 설명합니다.
 * 샘플 프로젝트를 참조하면 좀 더 쉽게 설치 가능합니다.
-* 제공한 TouchadSDK.xcframework 폴더를 프로젝트 소스폴더내 적절히 위치시켜 줍니다.
-* 앱프로젝트 target > general > Frameworks,Libraries, and Embedded Content 에서 add files 에서 TouchadSDK.xcframework폴더를 선택합니다.
-* Frameworks,Libraries, and Embedded Content 메뉴에서 TouchadSDK.xcframework의 Embed 옵션을 ‘Embed & Sign’ 선택합니다.
 
 ## CocoaPods 설정
 1. **CocoaPods를 사용하지 않습니다.**
@@ -21,14 +18,14 @@ https://github.com/runcomm/ios_TouchAd_spm.git
 
 Dependency Rule : Exact Version 
 
-Version : 0.0.3
+Version : 0.0.5
 
 Add to Project : BC앱프로젝트
 ```
 2. **Package Dependencies 확인**
 * 프로젝트 > Package Dependencies 메뉴 > Package 확인
 ```
-TouchadSDK 0.0.3
+TouchadSDK 0.0.5
 
 Alamofire 4.9.1
 ```
@@ -138,14 +135,6 @@ let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
 
 TASDKManager.openBCPlusMainMenu(isProd, mbrId)
 ```
-
-
-## 빌드시  주의사항
-
-* 애플 앱스토어 혹은 TestFlight 를 통한 앱배포시에는 x86_64 아키텍쳐 빌드가 제외된 SDK 로 빌드하여야 합니다.
-* arm64  빌드 SDK :  폴더/ios_touchAd_sdk/배포용/TouchadSDK.xcframework
-* XCode 에뮬레이터를 이용한 앱 개발시에는 x86_64 아키텍쳐 빌드가 포함된 SDK 로 빌드하여야 합니다.
-* arm64, x86_64 빌드 SDK : 폴더/ios_touchAd_sdk/개발용/TouchadSDK.xcframework
 
 ## Sample 프로젝트
 

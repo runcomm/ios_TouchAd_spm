@@ -11756,6 +11756,101 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "domain",
+            "printedName": "domain",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10TouchadSDK12TASDKManagerC6domainSSvpZ",
+            "mangledName": "$s10TouchadSDK12TASDKManagerC6domainSSvpZ",
+            "moduleName": "TouchadSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10TouchadSDK12TASDKManagerC6domainSSvgZ",
+                "mangledName": "$s10TouchadSDK12TASDKManagerC6domainSSvgZ",
+                "moduleName": "TouchadSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10TouchadSDK12TASDKManagerC6domainSSvsZ",
+                "mangledName": "$s10TouchadSDK12TASDKManagerC6domainSSvsZ",
+                "moduleName": "TouchadSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10TouchadSDK12TASDKManagerC6domainSSvMZ",
+                "mangledName": "$s10TouchadSDK12TASDKManagerC6domainSSvMZ",
+                "moduleName": "TouchadSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "initializeA",
             "printedName": "initializeA(_:platformId:)",
@@ -17513,6 +17608,34 @@
         "moduleName": "TouchadSDK"
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TouchadSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TouchadSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "TouchadSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "TouchadSDK"
+      },
+      {
         "kind": "TypeDecl",
         "name": "DateFormatter",
         "printedName": "DateFormatter",
@@ -18161,6 +18284,41 @@
             "printedName": "CVarArg",
             "usr": "s:s7CVarArgP",
             "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sendable",
+                        "printedName": "Swift.Sendable",
+                        "usr": "s:s8SendableP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
           },
           {
             "kind": "Conformance",
@@ -18919,48 +19077,39 @@
           },
           {
             "kind": "Conformance",
-            "name": "DataProtocol",
-            "printedName": "DataProtocol",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "Regions",
-                "printedName": "Regions",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CollectionOfOne",
-                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.UInt8]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:s15CollectionOfOneV"
+                    "name": "NSArray",
+                    "printedName": "Foundation.NSArray",
+                    "usr": "c:objc(cs)NSArray"
                   }
                 ]
               }
             ],
-            "usr": "s:10Foundation12DataProtocolP",
-            "mangledName": "$s10Foundation12DataProtocolP"
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
           },
           {
             "kind": "Conformance",
-            "name": "MutableDataProtocol",
-            "printedName": "MutableDataProtocol",
-            "usr": "s:10Foundation19MutableDataProtocolP",
-            "mangledName": "$s10Foundation19MutableDataProtocolP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ContiguousBytes",
+            "printedName": "ContiguousBytes",
+            "usr": "s:10Foundation15ContiguousBytesP",
+            "mangledName": "$s10Foundation15ContiguousBytesP"
           },
           {
             "kind": "Conformance",
@@ -19006,39 +19155,77 @@
           },
           {
             "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
+            "name": "DataProtocol",
+            "printedName": "DataProtocol",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
+                "name": "Regions",
+                "printedName": "Regions",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "NSArray",
-                    "printedName": "Foundation.NSArray",
-                    "usr": "c:objc(cs)NSArray"
+                    "name": "CollectionOfOne",
+                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.UInt8]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt8",
+                            "printedName": "Swift.UInt8",
+                            "usr": "s:s5UInt8V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:s15CollectionOfOneV"
                   }
                 ]
               }
             ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
+            "usr": "s:10Foundation12DataProtocolP",
+            "mangledName": "$s10Foundation12DataProtocolP"
           },
           {
             "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "MutableDataProtocol",
+            "printedName": "MutableDataProtocol",
+            "usr": "s:10Foundation19MutableDataProtocolP",
+            "mangledName": "$s10Foundation19MutableDataProtocolP"
           },
           {
             "kind": "Conformance",
-            "name": "ContiguousBytes",
-            "printedName": "ContiguousBytes",
-            "usr": "s:10Foundation15ContiguousBytesP",
-            "mangledName": "$s10Foundation15ContiguousBytesP"
+            "name": "AlamofireExtended",
+            "printedName": "AlamofireExtended",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedType",
+                "printedName": "ExtendedType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:9Alamofire0A8ExtendedP",
+            "mangledName": "$s9Alamofire0A8ExtendedP"
           }
         ]
       },
@@ -19170,6 +19357,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -19368,6 +19562,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -20749,7 +20950,7 @@
       "kind": "StringLiteral",
       "offset": 288,
       "length": 5,
-      "value": "\"1.5\""
+      "value": "\"1.6\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
@@ -20817,581 +21018,602 @@
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1048,
-      "length": 28,
-      "value": "\"https:\/\/t.ta.runcomm.co.kr\""
+      "offset": 1051,
+      "length": 20,
+      "value": "\"t.ta.runcomm.co.kr\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1115,
-      "length": 28,
-      "value": "\"https:\/\/3.ta.runcomm.co.kr\""
+      "offset": 1113,
+      "length": 20,
+      "value": "\"3.ta.runcomm.co.kr\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1203,
-      "length": 47,
-      "value": "\"https:\/\/storage.googleapis.com\/touchad-upload\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1285,
-      "length": 47,
-      "value": "\"https:\/\/storage.googleapis.com\/touchad-upload\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1370,
-      "length": 9,
-      "value": "\"touchad\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1416,
-      "length": 11,
-      "value": "\"touchadjs\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1467,
-      "length": 15,
-      "value": "\"profile00.png\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1523,
-      "length": 14,
-      "value": "\"banner00.png\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1578,
-      "length": 14,
-      "value": "\"banner01.png\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1648,
-      "length": 15,
-      "value": "\"scriptHandler\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1707,
-      "length": 12,
-      "value": "\"videoClose\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1761,
-      "length": 10,
-      "value": "\"videoEnd\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1816,
-      "length": 29,
-      "value": "\"https:\/\/ad.pointclick.co.kr\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1891,
-      "length": 22,
-      "value": "\"FinishViewController\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1938,
-      "length": 8,
-      "value": "\"finish\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 1977,
-      "length": 6,
-      "value": "\"true\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2052,
-      "length": 44,
-      "value": "\"네트워크 상태를 확인해주세요.\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2135,
-      "length": 62,
-      "value": "\"서버 에러 발생. 잠시 후 다시 시도해 주세요.\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2253,
-      "length": 8,
-      "value": "\"알림\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2300,
-      "length": 8,
-      "value": "\"확인\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2347,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2387,
-      "length": 8,
-      "value": "\"취소\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2435,
-      "length": 14,
-      "value": "\"계속보기\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2485,
-      "length": 11,
-      "value": "\"나가기\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2535,
-      "length": 8,
-      "value": "\"설정\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2592,
-      "length": 8,
-      "value": "\"완료\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2665,
-      "length": 67,
-      "value": "\"광고를 끝까지 시청하셔야 포인트가 적립됩니다.\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2801,
-      "length": 40,
-      "value": "\"정상적으로 등록되었습니다.\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2904,
-      "length": 17,
-      "value": "\"플러스적립\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 2963,
-      "length": 119,
-      "value": "\"을 위해 아래의 '설정'을 선택하여 '추적 허용' 옵션을 활성화 한 후, 다시 시도해주세요.\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 3129,
-      "length": 164,
-      "value": "\"\n\n※ 설정 > 페이북\/ISP에서 ‘추적허용’ 항목을 탭하면 팝업이 노출되며, 해당 팝업에서 ‘허용’을 선택하시면 됩니다.\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 3340,
-      "length": 140,
-      "value": "\"\n\n※ 설정 > 개인정보 보호 및 보안 > 추적 선택 후 페이북\/IPS 우측 버튼을 활성화로 변경하시면 됩니다.\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 3554,
+      "offset": 1177,
       "length": 18,
       "value": "\"ta.runcomm.co.kr\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3623,
+      "offset": 1227,
+      "length": 9,
+      "value": "\"http:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1269,
+      "length": 10,
+      "value": "\"https:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1339,
+      "length": 47,
+      "value": "\"https:\/\/storage.googleapis.com\/touchad-upload\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1421,
+      "length": 47,
+      "value": "\"https:\/\/storage.googleapis.com\/touchad-upload\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1506,
+      "length": 9,
+      "value": "\"touchad\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1552,
+      "length": 11,
+      "value": "\"touchadjs\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1603,
+      "length": 15,
+      "value": "\"profile00.png\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1659,
+      "length": 14,
+      "value": "\"banner00.png\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1714,
+      "length": 14,
+      "value": "\"banner01.png\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1784,
+      "length": 15,
+      "value": "\"scriptHandler\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1843,
+      "length": 12,
+      "value": "\"videoClose\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1897,
+      "length": 10,
+      "value": "\"videoEnd\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1952,
+      "length": 29,
+      "value": "\"https:\/\/ad.pointclick.co.kr\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2027,
+      "length": 22,
+      "value": "\"FinishViewController\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2074,
+      "length": 8,
+      "value": "\"finish\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2113,
+      "length": 6,
+      "value": "\"true\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2188,
+      "length": 44,
+      "value": "\"네트워크 상태를 확인해주세요.\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2271,
+      "length": 62,
+      "value": "\"서버 에러 발생. 잠시 후 다시 시도해 주세요.\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2389,
+      "length": 8,
+      "value": "\"알림\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2436,
+      "length": 8,
+      "value": "\"확인\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2483,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2523,
+      "length": 8,
+      "value": "\"취소\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2571,
+      "length": 14,
+      "value": "\"계속보기\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2621,
+      "length": 11,
+      "value": "\"나가기\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2671,
+      "length": 8,
+      "value": "\"설정\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2728,
+      "length": 8,
+      "value": "\"완료\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2801,
+      "length": 67,
+      "value": "\"광고를 끝까지 시청하셔야 포인트가 적립됩니다.\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 2937,
+      "length": 40,
+      "value": "\"정상적으로 등록되었습니다.\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3040,
+      "length": 17,
+      "value": "\"플러스적립\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3099,
+      "length": 119,
+      "value": "\"을 위해 아래의 '설정'을 선택하여 '추적 허용' 옵션을 활성화 한 후, 다시 시도해주세요.\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3265,
+      "length": 164,
+      "value": "\"\n\n※ 설정 > 페이북\/ISP에서 ‘추적허용’ 항목을 탭하면 팝업이 노출되며, 해당 팝업에서 ‘허용’을 선택하시면 됩니다.\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3476,
+      "length": 140,
+      "value": "\"\n\n※ 설정 > 개인정보 보호 및 보안 > 추적 선택 후 페이북\/ISP 우측 버튼을 활성화로 변경하시면 됩니다.\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3690,
+      "length": 18,
+      "value": "\"ta.runcomm.co.kr\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 3759,
       "length": 24,
       "value": "\"\/srv\/user\/mobile\/guide\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3678,
+      "offset": 3814,
       "length": 24,
       "value": "\"\/srv\/user\/mobile\/login\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3735,
+      "offset": 3871,
       "length": 25,
       "value": "\"\/srv\/user\/mobile\/update\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3804,
+      "offset": 3940,
       "length": 26,
       "value": "\"\/srv\/user\/mobile\/options\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3895,
+      "offset": 4031,
       "length": 27,
       "value": "\"\/srv\/user\/mobile\/complete\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 3982,
+      "offset": 4118,
       "length": 25,
       "value": "\"\/srv\/user\/mobile\/mypage\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4062,
+      "offset": 4198,
       "length": 28,
       "value": "\"\/srv\/user\/mobile\/mypage\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4144,
+      "offset": 4280,
       "length": 24,
       "value": "\"\/srv\/user\/mobile\/agree\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4221,
+      "offset": 4357,
       "length": 25,
       "value": "\"\/srv\/user\/mobile\/insert\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4306,
+      "offset": 4442,
       "length": 31,
       "value": "\"\/srv\/board\/mobile\/select\/p\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4408,
+      "offset": 4544,
       "length": 46,
       "value": "\"\/srv\/advertise_point_transaction\/mobile\/list\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4527,
+      "offset": 4663,
       "length": 53,
       "value": "\"\/srv\/comm_discount_transaction\/mobile\/list\/discount\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4646,
+      "offset": 4782,
       "length": 46,
       "value": "\"\/srv\/comm_discount_transaction\/mobile\/insert\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4755,
+      "offset": 4891,
       "length": 31,
       "value": "\"\/srv\/inquiry\/mobile\/insert\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4846,
+      "offset": 4982,
       "length": 31,
       "value": "\"\/srv\/advertise\/mobile\/list\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 4937,
+      "offset": 5073,
       "length": 37,
       "value": "\"\/srv\/advertise\/mobile\/list\/money\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5075,
+      "offset": 5211,
       "length": 38,
       "value": "\"\/srv\/advertise\/mobile\/list\/banner\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5215,
+      "offset": 5351,
       "length": 36,
       "value": "\"\/srv\/advertise\/mobile\/list\/main\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5352,
+      "offset": 5488,
       "length": 33,
       "value": "\"\/srv\/advertise\/mobile\/select\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5452,
+      "offset": 5588,
       "length": 32,
       "value": "\"\/srv\/advertise\/mobile\/movie\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5560,
+      "offset": 5696,
       "length": 26,
       "value": "\"\/srv\/bin_code\/api\/select\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5653,
+      "offset": 5789,
       "length": 42,
       "value": "\"\/srv\/advertise\/mobile\/select\/charging\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5748,
+      "offset": 5884,
       "length": 27,
       "value": "\"\/srv\/index\/mobile\/main\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5831,
+      "offset": 5967,
       "length": 26,
       "value": "\"\/srv\/card\/mobile\/list\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 5918,
+      "offset": 6054,
       "length": 28,
       "value": "\"\/srv\/user\/mobile\/update\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6010,
+      "offset": 6146,
       "length": 29,
       "value": "\"\/srv\/board\/mobile\/list\/n\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6099,
+      "offset": 6235,
       "length": 27,
       "value": "\"\/srv\/board\/mobile\/info\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6178,
+      "offset": 6314,
       "length": 31,
       "value": "\"\/srv\/board\/mobile\/select\/u\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6284,
+      "offset": 6420,
       "length": 29,
       "value": "\"\/srv\/board\/mobile\/select\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6373,
+      "offset": 6509,
       "length": 35,
       "value": "\"\/srv\/card\/mobile\/list\/approval\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6470,
+      "offset": 6606,
       "length": 29,
       "value": "\"\/srv\/board\/mobile\/list\/f\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6561,
+      "offset": 6697,
       "length": 33,
       "value": "\"\/srv\/board\/mobile\/select\/faq\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6659,
+      "offset": 6795,
       "length": 28,
       "value": "\"\/srv\/user\/mobile\/update\/bc\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6771,
+      "offset": 6907,
       "length": 21,
       "value": "\"\/srv\/user\/api\/login\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6826,
+      "offset": 6962,
       "length": 20,
       "value": "\"\/srv\/file\/api\/save\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6878,
+      "offset": 7014,
       "length": 15,
       "value": "\"\/srv\/main\/api\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6927,
+      "offset": 7063,
       "length": 22,
       "value": "\"\/srv\/user\/api\/select\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 6983,
+      "offset": 7119,
       "length": 22,
       "value": "\"\/srv\/user\/api\/update\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7045,
+      "offset": 7181,
       "length": 28,
       "value": "\"\/srv\/card\/api\/list\/company\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7107,
+      "offset": 7243,
       "length": 22,
       "value": "\"\/srv\/card\/api\/insert\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7163,
+      "offset": 7299,
       "length": 22,
       "value": "\"\/srv\/jwt\/api\/refresh\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7220,
+      "offset": 7356,
       "length": 23,
       "value": "\"\/srv\/jwt\/api\/generate\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7277,
+      "offset": 7413,
       "length": 22,
       "value": "\"\/srv\/file\/api\/vision\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7338,
+      "offset": 7474,
       "length": 107,
       "value": "\"http:\/\/swopenapi.seoul.go.kr\/api\/subway\/766a6c6d786e7a6f31323346536e6243\/json\/realtimeStationArrival\/0\/20\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7482,
+      "offset": 7618,
       "length": 27,
       "value": "\"\/srv\/user\/api\/select\/push\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7547,
+      "offset": 7683,
       "length": 27,
       "value": "\"\/srv\/user\/api\/update\/push\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7609,
+      "offset": 7745,
       "length": 217,
       "value": "\"http:\/\/apis.data.go.kr\/B552584\/MsrstnInfoInqireSvc\/getNearbyMsrstnList?serviceKey=IeQii9akYDZCXfkaw9TCP2w9y4reQ7iwr9BA%2F4xWiZATLgLboNZKxe5JNx8B7HLXPTp7Fekp%2BQcZtMkqBtVM0Q%3D%3D&pageNo=1&numOfRows=1&returnType=json\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 7858,
+      "offset": 7994,
       "length": 251,
       "value": "\"http:\/\/apis.data.go.kr\/B552584\/ArpltnInforInqireSvc\/getMsrstnAcctoRltmMesureDnsty?dataTerm=DAILY&pageNo=1&numOfRows=1&ServiceKey=IeQii9akYDZCXfkaw9TCP2w9y4reQ7iwr9BA%2F4xWiZATLgLboNZKxe5JNx8B7HLXPTp7Fekp%2BQcZtMkqBtVM0Q%3D%3D&returnType=json&ver=1.0\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 8144,
+      "offset": 8280,
       "length": 215,
       "value": "\"http:\/\/apis.data.go.kr\/1360000\/VilageFcstInfoService\/getUltraSrtFcst?ServiceKey=IeQii9akYDZCXfkaw9TCP2w9y4reQ7iwr9BA%2F4xWiZATLgLboNZKxe5JNx8B7HLXPTp7Fekp%2BQcZtMkqBtVM0Q%3D%3D&pageNo=1&numOfRows=100&dataType=json\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
       "kind": "StringLiteral",
-      "offset": 8392,
+      "offset": 8528,
       "length": 54,
       "value": "\"https:\/\/t.ta.runcomm.co.kr\/srv\/advertise\/mobile\/stop\""
     },
@@ -21510,2004 +21732,919 @@
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 1551,
+      "offset": 1280,
+      "length": 12,
+      "value": "\"KEY_DOMAIN\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1600,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 2110,
+      "offset": 2159,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 2400,
+      "offset": 2449,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 2697,
+      "offset": 2746,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 3342,
+      "offset": 3391,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 3656,
+      "offset": 3705,
       "length": 3,
       "value": "\"N\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 3966,
+      "offset": 4015,
       "length": 3,
       "value": "\"N\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 4270,
+      "offset": 4319,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 4576,
+      "offset": 4625,
       "length": 6,
       "value": "\"1992\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 4886,
+      "offset": 4935,
       "length": 3,
       "value": "\"N\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 6139,
+      "offset": 6838,
       "length": 8,
       "value": "\"scheme\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 6224,
+      "offset": 6923,
       "length": 9,
       "value": "\"command\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 6258,
+      "offset": 6957,
       "length": 16,
       "value": "\"login_complete\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 6302,
+      "offset": 7001,
       "length": 16,
       "value": "\"login_complete\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 6369,
+      "offset": 7068,
       "length": 8,
       "value": "\"usrIdx\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 6429,
+      "offset": 7128,
       "length": 10,
       "value": "\"isReload\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 6494,
+      "offset": 7193,
       "length": 13,
       "value": "\"accessToken\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 6585,
+      "offset": 7284,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 6797,
+      "offset": 7496,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 6952,
+      "offset": 7651,
       "length": 6,
       "value": "\"true\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 8434,
+      "offset": 9133,
       "length": 15,
       "value": "\"start_loading\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 8477,
+      "offset": 9176,
       "length": 15,
       "value": "\"start_loading\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 8683,
+      "offset": 9382,
       "length": 14,
       "value": "\"stop_loading\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 8725,
+      "offset": 9424,
       "length": 14,
       "value": "\"stop_loading\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 8929,
+      "offset": 9628,
       "length": 18,
       "value": "\"signout_complete\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 8975,
+      "offset": 9674,
       "length": 18,
       "value": "\"signout_complete\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 9078,
+      "offset": 9777,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 9437,
+      "offset": 10136,
       "length": 8,
       "value": "\"logout\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 9473,
+      "offset": 10172,
       "length": 8,
       "value": "\"logout\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 9836,
+      "offset": 10535,
       "length": 15,
       "value": "\"set_user_info\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 9879,
+      "offset": 10578,
       "length": 15,
       "value": "\"set_user_info\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 9961,
+      "offset": 10660,
       "length": 9,
       "value": "\"usr_idx\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 10190,
+      "offset": 10889,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 11295,
+      "offset": 11994,
       "length": 13,
       "value": "\"modal_close\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 11336,
+      "offset": 12035,
       "length": 13,
       "value": "\"modal_close\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 11593,
+      "offset": 12292,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 11965,
+      "offset": 12664,
       "length": 8,
       "value": "\"isMain\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 12240,
+      "offset": 12939,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 12340,
+      "offset": 13039,
       "length": 8,
       "value": "\"go_url\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 12376,
+      "offset": 13075,
       "length": 8,
       "value": "\"go_url\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 12426,
+      "offset": 13125,
       "length": 8,
       "value": "\"target\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 12506,
+      "offset": 13205,
       "length": 9,
       "value": "\"browser\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 13611,
+      "offset": 14310,
       "length": 5,
       "value": "\"url\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 14036,
+      "offset": 14735,
       "length": 7,
       "value": "\"inapp\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 14115,
+      "offset": 14814,
       "length": 5,
       "value": "\"url\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 14981,
+      "offset": 15680,
       "length": 24,
       "value": "\"PopupWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 15498,
+      "offset": 16197,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 15828,
+      "offset": 16527,
       "length": 25,
       "value": "\"CommonWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 15923,
+      "offset": 16622,
       "length": 9,
       "value": "\"TOUCHAD\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 16610,
+      "offset": 17309,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 16841,
+      "offset": 17540,
       "length": 15,
       "value": "\"refresh_token\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 16884,
+      "offset": 17583,
       "length": 15,
       "value": "\"refresh_token\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 17005,
+      "offset": 17704,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 17339,
+      "offset": 18038,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 17436,
+      "offset": 18135,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 17484,
+      "offset": 18183,
       "length": 63,
       "value": "\"javascript:sendAccessToken('\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 17543,
+      "offset": 18242,
       "length": 4,
       "value": "\"');\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 19156,
+      "offset": 19855,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 19261,
+      "offset": 19960,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 19317,
+      "offset": 20016,
       "length": 63,
       "value": "\"javascript:sendAccessToken('\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 19376,
+      "offset": 20075,
       "length": 4,
       "value": "\"');\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 20663,
+      "offset": 21362,
       "length": 32,
       "value": "\"Failed to decode JWT: \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 20694,
+      "offset": 21393,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 20766,
-      "length": 22,
-      "value": "\"get_subway_real_time\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 20816,
-      "length": 22,
-      "value": "\"get_subway_real_time\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 20896,
-      "length": 6,
-      "value": "\"name\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 20907,
-      "length": 8,
-      "value": "\"서울\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 21333,
-      "length": 4,
-      "value": "\"{}\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 21379,
-      "length": 40,
-      "value": "\"javascript:setStationRealTime(\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 21416,
-      "length": 1,
-      "value": "\");\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 21728,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22095,
-      "length": 28,
-      "value": "\"get_dust_weather_real_time\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22151,
-      "length": 28,
-      "value": "\"get_dust_weather_real_time\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22332,
-      "length": 5,
-      "value": "\"lat\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22342,
-      "length": 5,
-      "value": "\"0.0\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22382,
-      "length": 5,
-      "value": "\"lon\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22392,
-      "length": 5,
-      "value": "\"0.0\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22436,
-      "length": 9,
-      "value": "\"gridLat\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22450,
-      "length": 3,
-      "value": "\"0\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22492,
-      "length": 9,
-      "value": "\"gridLon\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22506,
-      "length": 3,
-      "value": "\"0\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22838,
-      "length": 12,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22849,
-      "length": 9,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22857,
-      "length": 12,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 22868,
-      "length": 13,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 22997,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 23105,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 23170,
-      "length": 13,
-      "value": "\"stationName\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 23452,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 23580,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 23710,
-      "length": 9,
-      "value": "\"dustObj\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 23786,
-      "length": 10,
-      "value": "\"dustInfo\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 24024,
-      "length": 5,
-      "value": "-3600"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 24102,
-      "length": 15,
-      "value": "\"yyyyMMdd HH00\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 24308,
-      "length": 3,
-      "value": "\" \""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 24455,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 24473,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 24701,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 24857,
-      "length": 10,
-      "value": "\"category\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 24874,
-      "length": 5,
-      "value": "\"SKY\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 24983,
-      "length": 10,
-      "value": "\"category\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 25000,
-      "length": 5,
-      "value": "\"T1H\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 25090,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 25325,
-      "length": 6,
-      "value": "\"HH00\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 25539,
-      "length": 10,
-      "value": "\"fcstTime\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 25654,
-      "length": 11,
-      "value": "\"fcstValue\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 25699,
-      "length": 11,
-      "value": "\"fcstValue\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 25939,
-      "length": 8,
-      "value": "\"skyObj\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 26026,
-      "length": 8,
-      "value": "\"t1hObj\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 26116,
-      "length": 14,
-      "value": "\"compareValue\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 26214,
-      "length": 13,
-      "value": "\"weatherInfo\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 26384,
-      "length": 8,
-      "value": "\"result\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 26396,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 26458,
-      "length": 7,
-      "value": "\"error\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 26469,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 26532,
-      "length": 6,
-      "value": "\"data\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 27011,
-      "length": 4,
-      "value": "\"{}\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 27089,
-      "length": 44,
-      "value": "\"javascript:setDustWeatherRealTime(\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 27130,
-      "length": 1,
-      "value": "\");\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 27602,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 28090,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 28477,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 29322,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 29649,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 30305,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 30572,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 30939,
+      "offset": 21465,
       "length": 7,
       "value": "\"alert\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 30974,
+      "offset": 21500,
       "length": 7,
       "value": "\"alert\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 31210,
+      "offset": 21736,
       "length": 7,
       "value": "\"title\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 31300,
+      "offset": 21826,
       "length": 5,
       "value": "\"msg\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 31389,
+      "offset": 21915,
       "length": 4,
       "value": "\"ok\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 32496,
+      "offset": 23022,
       "length": 9,
       "value": "\"confirm\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 32533,
+      "offset": 23059,
       "length": 9,
       "value": "\"confirm\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 32826,
+      "offset": 23352,
       "length": 7,
       "value": "\"title\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 32841,
+      "offset": 23367,
       "length": 7,
       "value": "\"title\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 32930,
+      "offset": 23456,
       "length": 5,
       "value": "\"msg\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 32943,
+      "offset": 23469,
       "length": 5,
       "value": "\"msg\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 33032,
+      "offset": 23558,
       "length": 4,
       "value": "\"ok\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 33044,
+      "offset": 23570,
       "length": 4,
       "value": "\"ok\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 33132,
+      "offset": 23658,
       "length": 8,
       "value": "\"cancel\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 33148,
+      "offset": 23674,
       "length": 8,
       "value": "\"cancel\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 33633,
+      "offset": 24159,
       "length": 12,
       "value": "\"ios_config\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 34064,
+      "offset": 24590,
       "length": 12,
       "value": "\"authorized\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 34243,
+      "offset": 24769,
       "length": 7,
       "value": "\"adsId\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 34393,
+      "offset": 24919,
       "length": 21,
       "value": "\"url : \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 34413,
+      "offset": 24939,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 34477,
+      "offset": 25003,
       "length": 47,
       "value": "\"javascript:location.replace('\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 34520,
+      "offset": 25046,
       "length": 4,
       "value": "\"');\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 36623,
+      "offset": 27149,
       "length": 7,
       "value": "\"adsId\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 36757,
+      "offset": 27283,
       "length": 21,
       "value": "\"url : \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 36777,
+      "offset": 27303,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 36833,
+      "offset": 27359,
       "length": 47,
       "value": "\"javascript:location.replace('\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 36876,
+      "offset": 27402,
       "length": 4,
       "value": "\"');\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 37240,
+      "offset": 27766,
       "length": 8,
       "value": "\"scheme\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 37389,
+      "offset": 27915,
       "length": 5,
       "value": "\":\/\/\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 37402,
-      "length": 10,
-      "value": "\"https:\/\/\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
-      "kind": "StringLiteral",
-      "offset": 37678,
+      "offset": 28112,
       "length": 24,
       "value": "\"PopupWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 38532,
+      "offset": 28269,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 38965,
+      "offset": 28702,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 39807,
+      "offset": 29544,
       "length": 25,
       "value": "\"CommonWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 39982,
+      "offset": 29719,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 40583,
+      "offset": 30320,
       "length": 25,
       "value": "\"CommonWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 40625,
+      "offset": 30362,
       "length": 24,
       "value": "\"PopupWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 41165,
+      "offset": 30902,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 41807,
+      "offset": 31544,
       "length": 207,
       "value": "\"Carrier Name: \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 41845,
+      "offset": 31582,
       "length": 1,
       "value": "\"\nCountryCode : \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 41890,
+      "offset": 31627,
       "length": 1,
       "value": "\"\nNetworkCode: \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 41934,
+      "offset": 31671,
       "length": 1,
       "value": "\"\nisoCountryCode: \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 41978,
+      "offset": 31715,
       "length": 1,
       "value": "\"\nallowsVOIP: \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 42013,
+      "offset": 31750,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 42482,
+      "offset": 32137,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "StringLiteral",
-      "offset": 42614,
+      "offset": 32269,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "Array",
-      "offset": 42814,
+      "offset": 32469,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 42834,
+      "offset": 32489,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "Dictionary",
-      "offset": 43265,
+      "offset": 32920,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 43286,
+      "offset": 32941,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 849,
-      "length": 7,
-      "value": "\"mbrId\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 1165,
-      "length": 7,
-      "value": "\"snsId\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 1274,
-      "length": 5,
-      "value": "\"sns\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 1367,
-      "length": 4,
-      "value": "\"id\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 1461,
-      "length": 5,
-      "value": "\"pwd\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 1581,
-      "length": 13,
-      "value": "\"pwdDecrytYn\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 1827,
-      "length": 18,
-      "value": "\"로그인 성공\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 2163,
-      "length": 18,
-      "value": "\"로그인 실패\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 2833,
+      "offset": 789,
       "length": 8,
       "value": "\"usrIdx\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2941,
+      "offset": 897,
       "length": 7,
       "value": "\"mbrId\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3043,
+      "offset": 999,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3062,
+      "offset": 1018,
       "length": 39,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3100,
+      "offset": 1056,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3317,
+      "offset": 1273,
       "length": 21,
       "value": "\"회원정보 성공\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3656,
+      "offset": 1612,
       "length": 21,
       "value": "\"회원정보 실패\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5684,
-      "length": 15,
-      "value": "\"Authorization\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 5703,
-      "length": 39,
-      "value": "\"Bearer \""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 5741,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 5958,
-      "length": 27,
-      "value": "\"회원업데이트 성공\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 6303,
-      "length": 27,
-      "value": "\"회원업데이트 실패\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 6773,
+      "offset": 2076,
       "length": 7,
       "value": "\"mbrId\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6893,
+      "offset": 2196,
       "length": 12,
       "value": "\"platformId\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6997,
+      "offset": 2300,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7016,
+      "offset": 2319,
       "length": 39,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7054,
+      "offset": 2357,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7271,
+      "offset": 2574,
       "length": 27,
       "value": "\"토큰업데이트 성공\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7424,
+      "offset": 2727,
       "length": 27,
       "value": "\"토큰업데이트 실패\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7891,
+      "offset": 3194,
       "length": 7,
       "value": "\"mbrId\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 8011,
+      "offset": 3314,
       "length": 12,
       "value": "\"platformId\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 8314,
+      "offset": 3617,
       "length": 21,
       "value": "\"토큰생성 성공\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
       "kind": "StringLiteral",
-      "offset": 8461,
+      "offset": 3764,
       "length": 21,
       "value": "\"토큰실패 실패\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 8890,
-      "length": 15,
-      "value": "\"Authorization\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 8909,
-      "length": 39,
-      "value": "\"Bearer \""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 8947,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 9443,
-      "length": 45,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 9479,
-      "length": 1,
-      "value": "\"\/\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 9487,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9577,
-      "length": 3,
-      "value": "200"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9583,
-      "length": 3,
-      "value": "300"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 9671,
-      "length": 29,
-      "value": "\"json response = \""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 9699,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 9920,
-      "length": 21,
-      "value": "\"realtimeArrivalList\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 10153,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 10162,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 10287,
-      "length": 35,
-      "value": "\"requestArrivalRealtime error : %@\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 10443,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 10767,
-      "length": 55,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 10799,
-      "length": 1,
-      "value": "\"&tmX=\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 10810,
-      "length": 1,
-      "value": "\"&tmY=\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 10821,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10911,
-      "length": 3,
-      "value": "200"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10917,
-      "length": 3,
-      "value": "300"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 11005,
-      "length": 29,
-      "value": "\"json response = \""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 11033,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 11254,
-      "length": 10,
-      "value": "\"response\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 11375,
-      "length": 6,
-      "value": "\"body\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 11497,
-      "length": 7,
-      "value": "\"items\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 11761,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 11770,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 11945,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 11954,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 12109,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12118,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 12250,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12259,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12362,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 12675,
-      "length": 69,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 12704,
-      "length": 1,
-      "value": "\"&stationName=\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 12743,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12833,
-      "length": 3,
-      "value": "200"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12839,
-      "length": 3,
-      "value": "300"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 12927,
-      "length": 29,
-      "value": "\"json response = \""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 12955,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 13176,
-      "length": 10,
-      "value": "\"response\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 13297,
-      "length": 6,
-      "value": "\"body\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 13419,
-      "length": 7,
-      "value": "\"items\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 13683,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 13692,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 13867,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 13876,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 14031,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14040,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 14172,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14181,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14284,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 14631,
-      "length": 95,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 14663,
-      "length": 1,
-      "value": "\"&base_date=\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 14685,
-      "length": 1,
-      "value": "\"&base_time=\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 14707,
-      "length": 1,
-      "value": "\"&nx=\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 14716,
-      "length": 1,
-      "value": "\"&ny=\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 14725,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 14815,
-      "length": 3,
-      "value": "200"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "IntegerLiteral",
-      "offset": 14821,
-      "length": 3,
-      "value": "300"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 14909,
-      "length": 29,
-      "value": "\"json response = \""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 14937,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 15158,
-      "length": 10,
-      "value": "\"response\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 15279,
-      "length": 6,
-      "value": "\"body\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 15401,
-      "length": 7,
-      "value": "\"items\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 15532,
-      "length": 6,
-      "value": "\"item\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 15818,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 15827,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 16022,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 16031,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 16206,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 16215,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 16370,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 16379,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "Array",
-      "offset": 16511,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 16520,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkRequest.swift",
-      "kind": "BooleanLiteral",
-      "offset": 16623,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/UserResponse.swift",
@@ -24177,212 +23314,205 @@
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5462,
+      "offset": 5455,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5468,
+      "offset": 5461,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 5565,
+      "offset": 5558,
       "length": 29,
       "value": "\"json response = \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 5593,
+      "offset": 5586,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 6924,
+      "offset": 6917,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 7221,
+      "offset": 7214,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 7249,
+      "offset": 7242,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 7434,
+      "offset": 7427,
       "length": 6,
       "value": "\"http\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 7892,
+      "offset": 7885,
       "length": 26,
       "value": "\"request url = \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 7917,
+      "offset": 7910,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 8194,
+      "offset": 8187,
       "length": 25,
       "value": "\"headers = \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 8218,
+      "offset": 8211,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 8369,
+      "offset": 8355,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 8375,
+      "offset": 8361,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 8472,
+      "offset": 8458,
       "length": 29,
       "value": "\"json response = \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 8500,
+      "offset": 8486,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 9831,
+      "offset": 9817,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 10650,
+      "offset": 10636,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 10891,
+      "offset": 10877,
       "length": 26,
       "value": "\"request url = \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 10916,
+      "offset": 10902,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 10938,
+      "offset": 10924,
       "length": 31,
       "value": "\"headers = \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 10968,
+      "offset": 10954,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 11052,
+      "offset": 11038,
       "length": 28,
       "value": "\"parameters = \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 11079,
+      "offset": 11065,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "Dictionary",
-      "offset": 11156,
+      "offset": 11142,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "FloatLiteral",
-      "offset": 13161,
+      "offset": 13270,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 13234,
+      "offset": 13343,
       "length": 10,
       "value": "\"Filedata\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 13256,
+      "offset": 13365,
       "length": 10,
       "value": "\"file.png\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 13278,
+      "offset": 13387,
       "length": 26,
       "value": "\"application\/octet-stream\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Network\/NetworkManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14544,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/JWTDecode\/JWTDecode.swift",
@@ -25261,113 +24391,120 @@
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4713,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 4700,
+      "offset": 4783,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 4830,
+      "offset": 4923,
       "length": 20,
       "value": "\"didFail = \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 4849,
+      "offset": 4942,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 5007,
+      "offset": 5100,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 5168,
+      "offset": 5261,
       "length": 41,
       "value": "\"didFailProvisionalNavigation = \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 5208,
+      "offset": 5301,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 5670,
+      "offset": 5763,
       "length": 21,
       "value": "\"ErrorViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 5741,
+      "offset": 5834,
       "length": 7,
       "value": "\"-1009\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 5836,
+      "offset": 5929,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 6582,
+      "offset": 6675,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 6786,
+      "offset": 6879,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 6940,
+      "offset": 7033,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 8343,
+      "offset": 8436,
       "length": 25,
       "value": "\"CommonWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 9010,
+      "offset": 9103,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 9106,
+      "offset": 9199,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAWebViewDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 9847,
+      "offset": 9940,
       "length": 4,
       "value": "true"
     },
@@ -25633,70 +24770,70 @@
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 791,
+      "offset": 981,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 3144,
+      "offset": 3334,
       "length": 25,
       "value": "\"CommonWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 3215,
+      "offset": 3405,
       "length": 10,
       "value": "\"TOUCH AD\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3355,
+      "offset": 3545,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 3890,
+      "offset": 4080,
       "length": 25,
       "value": "\"CommonWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 3961,
+      "offset": 4151,
       "length": 10,
       "value": "\"TOUCH AD\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4102,
+      "offset": 4292,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 4636,
+      "offset": 4826,
       "length": 25,
       "value": "\"CommonWebViewController\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 4707,
+      "offset": 4897,
       "length": 10,
       "value": "\"TOUCH AD\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TASDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4846,
+      "offset": 5036,
       "length": 4,
       "value": "true"
     },
@@ -30799,191 +29936,268 @@
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 62102,
+      "offset": 62086,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 62157,
+      "offset": 62141,
       "length": 38,
       "value": "\"aabc1234-a12b-a123-abcd-abcde1234567\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 62833,
+      "offset": 62817,
       "length": 17,
       "value": "\"CFBundleVersion\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 63691,
+      "offset": 63675,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 63745,
+      "offset": 63729,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 63850,
+      "offset": 63834,
       "length": 33,
       "value": "\"getNavigationController root : \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 64546,
+      "offset": 64530,
       "length": 3,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 64611,
+      "offset": 64595,
       "length": 3,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 64642,
+      "offset": 64626,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 64764,
+      "offset": 64748,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 64772,
+      "offset": 64756,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 64848,
+      "offset": 64832,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 64856,
+      "offset": 64840,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 64926,
+      "offset": 64910,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 64993,
+      "offset": 64977,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 65047,
+      "offset": 65031,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 65345,
+      "offset": 65329,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65475,
+      "offset": 65459,
       "length": 15,
       "value": "\"tel:\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65489,
+      "offset": 65473,
       "length": 4,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65858,
+      "offset": 65842,
       "length": 10,
       "value": "\"category\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65880,
+      "offset": 65864,
       "length": 8,
       "value": "\"action\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65973,
+      "offset": 65957,
       "length": 7,
       "value": "\"label\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 66839,
+      "offset": 66823,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 66900,
+      "offset": 66884,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67048,
+      "offset": 67032,
       "length": 26,
       "value": "\"(\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67072,
+      "offset": 67056,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67111,
+      "offset": 67095,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "StringLiteral",
+      "offset": 67188,
+      "length": 46,
+      "value": "\"(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "StringLiteral",
+      "offset": 67259,
+      "length": 22,
+      "value": "\"(?:[1-9]\\d{0,4}|0)\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "StringLiteral",
+      "offset": 67317,
+      "length": 25,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "StringLiteral",
+      "offset": 67328,
+      "length": 1,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "StringLiteral",
+      "offset": 67341,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "Array",
+      "offset": 67461,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "IntegerLiteral",
+      "offset": 67511,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "Array",
+      "offset": 67599,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "StringLiteral",
+      "offset": 67664,
+      "length": 32,
+      "value": "\"Error creating regex: \""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "StringLiteral",
+      "offset": 67695,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "BooleanLiteral",
+      "offset": 67717,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ObjectMapper\/CodableTransform.swift",
@@ -32699,6 +31913,181 @@
       "offset": 1459,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 768,
+      "length": 30,
+      "value": "\"CardCaptureViewController_00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 938,
+      "length": 17,
+      "value": "\"CardPopupView00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1095,
+      "length": 17,
+      "value": "\"CardPopupView01\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1252,
+      "length": 17,
+      "value": "\"CardPopupView02\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1432,
+      "length": 29,
+      "value": "\"CardRegistViewController_00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1624,
+      "length": 29,
+      "value": "\"CardRegistViewController_01\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1798,
+      "length": 20,
+      "value": "\"CommonPopupView_00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1969,
+      "length": 23,
+      "value": "\"CustomKeyboardView_00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2143,
+      "length": 23,
+      "value": "\"CustomKeyboardView_01\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2317,
+      "length": 23,
+      "value": "\"CustomKeyboardView_02\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2487,
+      "length": 21,
+      "value": "\"DalCoinPopupView_00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2661,
+      "length": 24,
+      "value": "\"ErrorViewController_00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2838,
+      "length": 24,
+      "value": "\"ErrorViewController_01\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3030,
+      "length": 32,
+      "value": "\"MP_CardRegistViewController_00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3228,
+      "length": 31,
+      "value": "\"MP_CommonWebViewController_00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3425,
+      "length": 31,
+      "value": "\"MP_CommonWebViewController_01\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3622,
+      "length": 31,
+      "value": "\"MP_CommonWebViewController_02\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3819,
+      "length": 31,
+      "value": "\"MP_CommonWebViewController_03\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4007,
+      "length": 26,
+      "value": "\"PromptCommonPopupView_00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4179,
+      "length": 20,
+      "value": "\"WelcomePopupView00\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4335,
+      "length": 16,
+      "value": "\"arrow_back_btn\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4498,
+      "length": 22,
+      "value": "\"arrow_back_btn_black\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4650,
+      "length": 12,
+      "value": "\"closeBlack\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4802,
+      "length": 18,
+      "value": "\"radio-button-off\""
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Library\/Developer\/Xcode\/DerivedData\/TouchadSDK-gpxwioyhjdmmwocxydeqjzcxxrle\/Build\/Intermediates.noindex\/ArchiveIntermediates\/TouchadSDK\/IntermediateBuildFilesPath\/TouchadSDK.build\/Release-iphoneos\/TouchadSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4958,
+      "length": 17,
+      "value": "\"radio_button_on\""
     }
   ]
 }

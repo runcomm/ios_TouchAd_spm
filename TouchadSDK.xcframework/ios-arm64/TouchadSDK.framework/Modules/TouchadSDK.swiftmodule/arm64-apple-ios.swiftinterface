@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TouchadSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -7,13 +7,16 @@ import AdSupport
 import Alamofire
 import AppTrackingTransparency
 import CoreTelephony
+import DeveloperToolsSupport
 import Foundation
 import Swift
+import SwiftUI
 @_exported import TouchadSDK
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public struct MapError : Swift.Error {
   public var key: Swift.String?
   public var currentValue: Any?
@@ -301,6 +304,10 @@ open class CustomDateFormatTransform : TouchadSDK.DateFormatterTransform {
 @_inheritsConvenienceInitializers @objc public class TASDKManager : ObjectiveC.NSObject {
   public static var mbrId: Swift.String {
     get
+  }
+  public static var domain: Swift.String {
+    get
+    set(value)
   }
   public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String)
   public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String, pushToken: Swift.String?)

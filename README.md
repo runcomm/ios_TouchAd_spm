@@ -1,4 +1,4 @@
-#  TouchAd SDK  for BC 페이북 설치 가이드
+#  TouchAd SDK  for Syrup 설치 가이드
 
 * 정상적인 제휴서비스를 위한 터치애드SDK 설치과정을 설명합니다.
 * 샘플 프로젝트를 참조하면 좀 더 쉽게 설치 가능합니다.
@@ -20,28 +20,28 @@ https://github.com/runcomm/ios_TouchAd_spm.git
 
 Dependency Rule : Exact Version 
 
-Version : 0.0.6
+Version : 0.0.7
 
-Add to Project : BC앱프로젝트
+Add to Project : Syrup앱프로젝트
 ```
 
 * Alamofire SPM
 ```
 https://github.com/Alamofire/Alamofire.git
 
-Dependency Rule : Exact Version 
+Dependency Rule : Up to Next Minor Version 
 
 Version : 5.9.0
 
-Add to Project : BC앱프로젝트
+Add to Project : Syrup앱프로젝트
 ```
 
 2. **Package Dependencies 확인**
 * 프로젝트 > Package Dependencies 메뉴 > Package 확인
 ```
-TouchadSDK 0.0.6
+TouchadSDK 0.0.7
 
-Alamofire 5.9.0
+Alamofire 5.9.0 < 최신버전
 ```
 
 ## 권한 설정
@@ -125,72 +125,29 @@ func requestPermission() {
 public class TASDKManager: NSObject {
 
 /**
-* 플러스적립 화면 시작(머니박스 당첨화면)
+* 꽝없이 3번 랜덤 포인트 화면 시작
 * @param isProd: 개발 / 상용 도메인을 설정하는 Bool 값 (필수, true = 상용 도메인, false = 개발 도메인)
-* @param mbrId: BC 페이북 머니회원번호 (필수)
+* @param cid: 고객식별번호 (필수)
+* @param gender: 성별(남자 : M, 여자 : F, 기타 : Z)
+* @param birthYear: 출생년도(ex : 1996)
 */
-func openBCPlusMoneyMenu(_ isProd : Bool, _ mbrId : String)
-
-/**
-* 플러스적립 화면 시작(출석체크 클로징 배너)
-* @param isProd: 개발 / 상용 도메인을 설정하는 Bool 값 (필수, true = 상용 도메인, false = 개발 도메인)
-* @param mbrId: BC 페이북 머니회원번호 (필수)
-*/
-func openBCPlusBannerMenu(_ isProd : Bool, _ mbrId : String)
-
-/**
-* 플러스적립 화면 시작(출석체크 메인 화면)
-* @param isProd: 개발 / 상용 도메인을 설정하는 Bool 값 (필수, true = 상용 도메인, false = 개발 도메인)
-* @param mbrId: BC 페이북 머니회원번호 (필수)
-*/
-func openBCPlusMainMenu(_ isProd : Bool, _ mbrId : String)
+func openEarningMenu(_ isProd : Bool, _ cid : String, _ gender : String?, _ birthYear : String?)
 
 }
 ```
 
-~~## 터치애드 광고 플랫폼 회원처리 시작~~
 
+## 꽝없이 3번 랜덤 포인트 화면 시작
 
-## 플러스적립 화면 시작(머니박스 당첨화면)
+*  Syrup 앱 내 출석체크 화면에서 '꽝없이 3번 랜덤포인트' 버튼을 터치시 호출합니다.
 
-*  BC 페이북 앱 내 머니박스 당첨 화면 팝업 화면에서 '머니박스 3개 더 받기' 버튼을 터치시 호출합니다.
-
-*  아래는 딥링크를 통해 호출하는 플러스적립 화면 시작함수 예시입니다.
+*  아래는 꽝없이 3번 랜덤 포인트 화면 시작함수 예시입니다.
 ```
-딥링크 - app://plusmoney?mbrId={머니회원번호}
-
-함수호출 - 
 let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
+let gender : String = "M"
+let birthYear : String = "1996" 
 
-TASDKManager.openBCPlusMoneyMenu(isProd, mbrId)
-```
-
-## 플러스적립 화면 시작(출석체크 클로징 배너)
-
-*  BC 페이북 앱 내 출석체크 클로징 배너에서 '머니 PLUS' 버튼을 터치시 호출합니다.
-
-*  아래는 딥링크를 통해 호출하는 플러스적립 화면 시작함수 예시입니다.
-```
-딥링크 - app://plusbanner?mbrId={머니회원번호}
-
-함수호출 - 
-let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
-
-TASDKManager.openBCPlusBannerMenu(isProd, mbrId)
-```
-
-## 플러스적립 화면 시작(출석체크 메인 화면)
-
-*  BC 페이북 앱 내 출석체크 메인 화면에서 플러스적립 화면 시작 버튼을 터치시 호출합니다.
-
-*  아래는 딥링크를 통해 호출하는 플러스적립 화면 시작함수 예시입니다.
-```
-딥링크 - app://plusmain?mbrId={머니회원번호}
-
-함수호출 - 
-let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
-
-TASDKManager.openBCPlusMainMenu(isProd, mbrId)
+TASDKManager.openEarningMenu(isProd, cid, gender, birthYear)
 ```
 
 ## Sample 프로젝트

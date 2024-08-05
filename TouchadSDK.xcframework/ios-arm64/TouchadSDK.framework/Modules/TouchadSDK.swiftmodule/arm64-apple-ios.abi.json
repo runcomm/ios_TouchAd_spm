@@ -20950,7 +20950,7 @@
       "kind": "StringLiteral",
       "offset": 288,
       "length": 5,
-      "value": "\"1.7\""
+      "value": "\"1.8\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
@@ -29963,213 +29963,192 @@
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
-      "kind": "IntegerLiteral",
-      "offset": 63754,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 63859,
+      "offset": 63887,
       "length": 33,
       "value": "\"getNavigationController root : \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 64555,
+      "offset": 64583,
       "length": 3,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 64620,
+      "offset": 64648,
       "length": 3,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 64651,
+      "offset": 64679,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 64773,
+      "offset": 64801,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 64781,
+      "offset": 64809,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 64857,
+      "offset": 64885,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 64865,
+      "offset": 64893,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 64935,
+      "offset": 64963,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 65002,
+      "offset": 65030,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 65056,
+      "offset": 65084,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 65354,
+      "offset": 65382,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65484,
+      "offset": 65512,
       "length": 15,
       "value": "\"tel:\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65498,
+      "offset": 65526,
       "length": 4,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65867,
+      "offset": 65895,
       "length": 10,
       "value": "\"category\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65889,
+      "offset": 65917,
       "length": 8,
       "value": "\"action\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 65982,
+      "offset": 66010,
       "length": 7,
       "value": "\"label\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 66848,
+      "offset": 67009,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "IntegerLiteral",
-      "offset": 66909,
+      "offset": 67047,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67057,
+      "offset": 67195,
       "length": 26,
       "value": "\"(\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67081,
+      "offset": 67219,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67120,
+      "offset": 67258,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67213,
+      "offset": 67351,
       "length": 46,
       "value": "\"(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67284,
+      "offset": 67422,
       "length": 22,
       "value": "\"(?:[1-9]\\d{0,4}|0)\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67342,
+      "offset": 67480,
       "length": 25,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67353,
+      "offset": 67491,
       "length": 1,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67366,
+      "offset": 67504,
       "length": 1,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
-      "kind": "Array",
-      "offset": 67486,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
-      "kind": "IntegerLiteral",
-      "offset": 67536,
-      "length": 1,
-      "value": "0"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
@@ -30180,22 +30159,36 @@
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "IntegerLiteral",
+      "offset": 67674,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
+      "kind": "Array",
+      "offset": 67762,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67689,
+      "offset": 67827,
       "length": 32,
       "value": "\"Error creating regex: \""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "StringLiteral",
-      "offset": 67720,
+      "offset": 67858,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 67742,
+      "offset": 67880,
       "length": 5,
       "value": "false"
     },

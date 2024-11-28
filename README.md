@@ -20,7 +20,7 @@ https://github.com/runcomm/ios_TouchAd_spm.git
 
 Dependency Rule : Exact Version 
 
-Version : 0.0.8
+Version : 0.0.9
 
 Add to Project : BC앱프로젝트
 ```
@@ -39,7 +39,7 @@ Add to Project : BC앱프로젝트
 2. **Package Dependencies 확인**
 * 프로젝트 > Package Dependencies 메뉴 > Package 확인
 ```
-TouchadSDK 0.0.8
+TouchadSDK 0.0.9
 
 Alamofire 5.9.0
 ```
@@ -127,23 +127,26 @@ public class TASDKManager: NSObject {
 /**
 * 플러스적립 화면 시작(머니박스 당첨화면)
 * @param isProd: 개발 / 상용 도메인을 설정하는 Bool 값 (필수, true = 상용 도메인, false = 개발 도메인)
+* @param isModal: 화면 호출방식 스택 / 모달 결정하는 Bool 값
 * @param mbrId: BC 페이북 머니회원번호 (필수)
 */
-func openBCPlusMoneyMenu(_ isProd : Bool, _ mbrId : String)
+func openBCPlusMoneyMenu(__ isProd : Bool,_ isModal : Bool = false, _ mbrId : String)
 
 /**
 * 플러스적립 화면 시작(출석체크 클로징 배너)
 * @param isProd: 개발 / 상용 도메인을 설정하는 Bool 값 (필수, true = 상용 도메인, false = 개발 도메인)
+* @param isModal: 화면 호출방식 스택 / 모달 결정하는 Bool 값
 * @param mbrId: BC 페이북 머니회원번호 (필수)
 */
-func openBCPlusBannerMenu(_ isProd : Bool, _ mbrId : String)
+func openBCPlusBannerMenu(_ isProd : Bool,_ isModal : Bool = false, _ mbrId : String)
 
 /**
 * 플러스적립 화면 시작(출석체크 메인 화면)
 * @param isProd: 개발 / 상용 도메인을 설정하는 Bool 값 (필수, true = 상용 도메인, false = 개발 도메인)
+* @param isModal: 화면 호출방식 스택 / 모달 결정하는 Bool 값
 * @param mbrId: BC 페이북 머니회원번호 (필수)
 */
-func openBCPlusMainMenu(_ isProd : Bool, _ mbrId : String)
+func openBCPlusMainMenu(_ isProd : Bool,_ isModal : Bool = false, _ mbrId : String)
 
 }
 ```
@@ -161,6 +164,7 @@ func openBCPlusMainMenu(_ isProd : Bool, _ mbrId : String)
 
 함수호출 - 
 let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
+let isModal : Bool = true(모달) 또는 false(스택)
 
 TASDKManager.openBCPlusMoneyMenu(isProd, mbrId)
 ```
@@ -175,6 +179,7 @@ TASDKManager.openBCPlusMoneyMenu(isProd, mbrId)
 
 함수호출 - 
 let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
+let isModal : Bool = true(모달) 또는 false(스택)
 
 TASDKManager.openBCPlusBannerMenu(isProd, mbrId)
 ```
@@ -189,6 +194,7 @@ TASDKManager.openBCPlusBannerMenu(isProd, mbrId)
 
 함수호출 - 
 let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
+let isModal : Bool = true(모달) 또는 false(스택)
 
 TASDKManager.openBCPlusMainMenu(isProd, mbrId)
 ```

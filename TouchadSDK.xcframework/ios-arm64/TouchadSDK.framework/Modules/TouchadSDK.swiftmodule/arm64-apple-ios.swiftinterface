@@ -311,9 +311,9 @@ open class CustomDateFormatTransform : TouchadSDK.DateFormatterTransform {
   }
   public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String)
   public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String, pushToken: Swift.String?)
-  @objc public static func openBCPlusMoneyMenu(_ isProd: Swift.Bool, _ mbrId: Swift.String)
-  @objc public static func openBCPlusBannerMenu(_ isProd: Swift.Bool, _ mbrId: Swift.String)
-  @objc public static func openBCPlusMainMenu(_ isProd: Swift.Bool, _ mbrId: Swift.String)
+  @objc public static func openBCPlusMoneyMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
+  @objc public static func openBCPlusBannerMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
+  @objc public static func openBCPlusMainMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
   @objc public static func openBCSettingMenu()
   @objc override dynamic public init()
   @objc deinit

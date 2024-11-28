@@ -312,9 +312,9 @@ SWIFT_CLASS("_TtC10TouchadSDK13GeoTransPoint")
 
 SWIFT_CLASS("_TtC10TouchadSDK12TASDKManager")
 @interface TASDKManager : NSObject
-+ (void)openBCPlusMoneyMenu:(BOOL)isProd :(NSString * _Nonnull)mbrId;
-+ (void)openBCPlusBannerMenu:(BOOL)isProd :(NSString * _Nonnull)mbrId;
-+ (void)openBCPlusMainMenu:(BOOL)isProd :(NSString * _Nonnull)mbrId;
++ (void)openBCPlusMoneyMenu:(BOOL)isProd :(BOOL)isModal :(NSString * _Nonnull)mbrId;
++ (void)openBCPlusBannerMenu:(BOOL)isProd :(BOOL)isModal :(NSString * _Nonnull)mbrId;
++ (void)openBCPlusMainMenu:(BOOL)isProd :(BOOL)isModal :(NSString * _Nonnull)mbrId;
 + (void)openBCSettingMenu;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

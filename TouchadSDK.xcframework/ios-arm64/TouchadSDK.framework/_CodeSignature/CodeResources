@@ -10,15 +10,15 @@
 		</data>
 		<key>CommonPickerPopupView.nib</key>
 		<data>
-		F30k/5btNFCXT0OEQ3XKj7Nt+R4=
+		sPSGV0DfiFyCwIPBT15s+om/lpc=
 		</data>
 		<key>CommonPopupView.nib</key>
 		<data>
-		K0VDZY/4WvQZXmZ6eEgPpixxqhM=
+		Y3JLmS9Rim2Uq3//HYzvBhspHqE=
 		</data>
 		<key>CommonWebViewController.nib</key>
 		<data>
-		H0LYjHX24YuxHsD7vtLpzkfEVGU=
+		schJTccxyEsNbAH/hlgZ5oEOV8M=
 		</data>
 		<key>ErrorViewController.nib</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/TouchadSDK-Swift.h</key>
 		<data>
-		izHzFZTNmuGJq1NKLD5a/QbH/z4=
+		nZlCW4VBFfX9+Zaq6lZSYsVK/iY=
 		</data>
 		<key>Headers/TouchadSDK.h</key>
 		<data>
@@ -34,15 +34,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IXtFhgr4vmqK9tMbMZu+kEe0UX8=
+		cRqEL25c5v+GC++huraCv53NYxs=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		tdg9HzCkukY87o8rSma73r7X50Y=
+		UhNUU+d1tKpHSWhQvvZntfeu2vk=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		XdSGC43XPJE1gEdlkWPGoB3/uBU=
+		BHMLrcSnzrCl5ZMvaWWzjlD3nXA=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		XdSGC43XPJE1gEdlkWPGoB3/uBU=
+		BHMLrcSnzrCl5ZMvaWWzjlD3nXA=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		KB2bIcl9YepEG+2qc3wseuXKQms=
+		Zy3UI7JkSzWTTrYXxmO64cRbJWQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -102,21 +102,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vCmQY4SJ/zjBboUPpfX7yaeYxKfmamwNo7ipZ9tVx1s=
+			ijW81IbBd2NcmAVCiJ2EwIQLxR5OBrMjqadClI7h5X8=
 			</data>
 		</dict>
 		<key>CommonPopupView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EJ+wvdkSmABDON35wwiAfTiNz7Ma+qCmMCLJbP5xPr8=
+			f3+h3AY3CbAwltqWRAK2j4OR1vUKnXUSPghSTLmSyyw=
 			</data>
 		</dict>
 		<key>CommonWebViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3lsPwtThhuxD7CiUiih1MCQdFTrn4flmfocSpoeByPA=
+			zlc1ayReyT3lqImlsnw7odqAlt+3CFfbjh21l1d2rvM=
 			</data>
 		</dict>
 		<key>ErrorViewController.nib</key>
@@ -130,7 +130,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iPbX5rXCN2apw0tLlHPKxcicpiwRCljF6hNT5OKp4II=
+			qXVZt+gfnfcne5sPgFNy4YU9ieLL3LmK/Wo8TSuRBUU=
 			</data>
 		</dict>
 		<key>Headers/TouchadSDK.h</key>
@@ -144,14 +144,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xovxclqzLpJ7VnsNx4xnFB6X4LTqypS5+Gxczz5nH4s=
+			e3SKIgIVC/e0no9f685OyYxoilQhTVL21JPvPIhS85E=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w1Q2jSeJ7hgBC0ny1GpE0arkBQ0UoqB3Wg6JX3ppyeE=
+			0RAi7gZwIDHA92xo94UhpMhk841pl+zRYESrH1O+0Ek=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -165,14 +165,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w1Q2jSeJ7hgBC0ny1GpE0arkBQ0UoqB3Wg6JX3ppyeE=
+			0RAi7gZwIDHA92xo94UhpMhk841pl+zRYESrH1O+0Ek=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vrql4PGW7uqBn0sXr8p8y7slDe+aUIxQRxQfvoismS4=
+			80eIEaQAia0LckZYMDKHsE4rpt3LqKuloBCMQ27tT3k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

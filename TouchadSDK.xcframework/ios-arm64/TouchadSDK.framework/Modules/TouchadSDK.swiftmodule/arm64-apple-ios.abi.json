@@ -27456,112 +27456,126 @@
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 28242,
+      "offset": 28161,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 28427,
+      "offset": 28346,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 28754,
+      "offset": 29147,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 29332,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 29659,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 28906,
+      "offset": 29811,
       "length": 30,
       "value": "\"javascript:closeAdvertise();\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 29574,
+      "offset": 30479,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 29712,
+      "offset": 30617,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 30419,
+      "offset": 31324,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 30649,
+      "offset": 31554,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 30775,
+      "offset": 31680,
       "length": 4,
       "value": "9990"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 30972,
+      "offset": 31877,
       "length": 4,
       "value": "9990"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 31043,
+      "offset": 31948,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 32290,
+      "offset": 33195,
       "length": 17,
       "value": "\"rightMenuAction\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 32565,
+      "offset": 33470,
       "length": 16,
       "value": "\"questionAction\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 32941,
+      "offset": 33846,
       "length": 30,
       "value": "\"javascript:checkUserAgree();\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 33255,
+      "offset": 34160,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/ViewController\/CommonWeb\/CommonWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 33480,
+      "offset": 34385,
       "length": 15,
       "value": "\"stopIndicator\""
     },

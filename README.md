@@ -166,7 +166,7 @@ func openBCPlusMainMenu(_ isProd : Bool,_ isModal : Bool = false, _ mbrId : Stri
 let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
 let isModal : Bool = true(모달) 또는 false(스택)
 
-TASDKManager.openBCPlusMoneyMenu(isProd, mbrId)
+TASDKManager.openBCPlusMoneyMenu(isProd, isModal, mbrId)
 ```
 
 ## 플러스적립 화면 시작(출석체크 클로징 배너)
@@ -181,7 +181,7 @@ TASDKManager.openBCPlusMoneyMenu(isProd, mbrId)
 let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
 let isModal : Bool = true(모달) 또는 false(스택)
 
-TASDKManager.openBCPlusBannerMenu(isProd, mbrId)
+TASDKManager.openBCPlusBannerMenu(isProd, isModal, mbrId)
 ```
 
 ## 플러스적립 화면 시작(출석체크 메인 화면)
@@ -196,7 +196,7 @@ TASDKManager.openBCPlusBannerMenu(isProd, mbrId)
 let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
 let isModal : Bool = true(모달) 또는 false(스택)
 
-TASDKManager.openBCPlusMainMenu(isProd, mbrId)
+TASDKManager.openBCPlusMainMenu(isProd, isModal, mbrId)
 ```
 
 ## Sample 프로젝트

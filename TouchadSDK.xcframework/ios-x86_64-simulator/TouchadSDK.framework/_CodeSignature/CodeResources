@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/TouchadSDK-Swift.h</key>
 		<data>
-		R6d8nkkkb6BQD1pc+AARj/WUDa4=
+		XhnKh1KYBM7OqY/AlFb/6wuPrU8=
 		</data>
 		<key>Headers/TouchadSDK.h</key>
 		<data>
@@ -34,27 +34,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jZ8rb+TlRcELNDtQcbNaCxNdtT4=
+		Y8vSr0gssVGdrgHfDpD6xQ7ChpE=
 		</data>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		TbYec9LVXw/4YvkRHtmnaRLCggY=
+		5wZqXfY1K1BIGvUl5F4olPAyuSY=
 		</data>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		5NzoQyAAzcmJR3ddu+2DstTWD5A=
+		rzE6IGJtIPhDmuDYeGmShrWKfoQ=
 		</data>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		bypMte9SAapTswiy0Lb69WYzhLY=
+		/uDfH7uPZp8X24F0MTjN/Pnv3QU=
 		</data>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		5NzoQyAAzcmJR3ddu+2DstTWD5A=
+		rzE6IGJtIPhDmuDYeGmShrWKfoQ=
 		</data>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ogiZ88CXPxh593JMgoWSFkuXAfI=
+		EFtQAy1Cegrcf647lqTLYwX38sc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -130,7 +130,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fgYivfcjHVXdth/8ErfmmB3vCwJAkfbPUTUtIceh9UA=
+			sUz97MQOr7rUOP8VrbFoa7oC8m6cdDZtq9HJs5OlAQo=
 			</data>
 		</dict>
 		<key>Headers/TouchadSDK.h</key>
@@ -140,39 +140,39 @@
 			dB88o2I9e8EA4aqDdUVnyWJM37SdH9EmQE/VAYXLe6c=
 			</data>
 		</dict>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4yfuYMYK8fTf4CweNJkXQ0tql5yicqw/E1nfF4D87DM=
+			73dH6i5o0r7DKMK7MI0sVXchN9N86GLkWRTB9RBrmcg=
 			</data>
 		</dict>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NUdBhCLPG2fRJSzi2QejwHKVaRiEk2/93lstKxhMBaI=
+			Qt/GgYYVJYe5h1hUTZ/sf3R+JhIKm+4jEU8/ckWk1Wg=
 			</data>
 		</dict>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1viYfhG4lBYg7OxYc+GvZRvdhbVvzWpoObPs+peMos8=
+			9RNBsQcZ4OTRp2XgHLtWEj5oiVOd72uHU/gPOcM2BEg=
 			</data>
 		</dict>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NUdBhCLPG2fRJSzi2QejwHKVaRiEk2/93lstKxhMBaI=
+			Qt/GgYYVJYe5h1hUTZ/sf3R+JhIKm+4jEU8/ckWk1Wg=
 			</data>
 		</dict>
-		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rcnA87U4AKr3TzOhyTAXPPJ9UVSE1397knf+iL3sycQ=
+			aLrIU5PV07VzMnybvtzi2Fjk8ePGDe+NVguEr0GRisY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

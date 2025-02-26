@@ -1,10 +1,9 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TouchadSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -module-name TouchadSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import AdSupport
-import Alamofire
 import AppTrackingTransparency
 import CoreTelephony
 import DeveloperToolsSupport
@@ -17,7 +16,7 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public struct MapError : Swift.Error {
+public struct MapError : Swift.Error, @unchecked Swift.Sendable {
   public var key: Swift.String?
   public var currentValue: Any?
   public var reason: Swift.String?
@@ -311,10 +310,9 @@ open class CustomDateFormatTransform : TouchadSDK.DateFormatterTransform {
   }
   public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String)
   public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String, pushToken: Swift.String?)
-  @objc public static func openBCPlusMoneyMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
-  @objc public static func openBCPlusBannerMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
-  @objc public static func openBCPlusMainMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
-  @objc public static func openBCSettingMenu()
+  @_Concurrency.MainActor @objc public static func openBCPlusMoneyMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
+  @_Concurrency.MainActor @objc public static func openBCPlusBannerMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
+  @_Concurrency.MainActor @objc public static func openBCPlusMainMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -405,15 +403,15 @@ extension TouchadSDK.JWT {
 }
 public func printd(_ item: Any, function: Swift.String = #function, file: Swift.String = #file, line: Swift.Int = #line)
 extension UIKit.UIDatePicker {
-  @_Concurrency.MainActor(unsafe) public var clampedDate: Foundation.Date {
+  @_Concurrency.MainActor @preconcurrency public var clampedDate: Foundation.Date {
     get
   }
 }
 extension UIKit.UIWindow {
-  public var visibleViewController: UIKit.UIViewController? {
+  @_Concurrency.MainActor @preconcurrency public var visibleViewController: UIKit.UIViewController? {
     get
   }
-  public func visibleViewControllerFrom(vc: UIKit.UIViewController? = UIApplication.shared.windows.first(where: {$0.isKeyWindow})?.rootViewController) -> UIKit.UIViewController?
+  @_Concurrency.MainActor @preconcurrency public func visibleViewControllerFrom(vc: UIKit.UIViewController? = UIApplication.shared.windows.first(where: {$0.isKeyWindow})?.rootViewController) -> UIKit.UIViewController?
 }
 open class CodableTransform<T> : TouchadSDK.TransformType where T : Swift.Decodable, T : Swift.Encodable {
   public typealias Object = T
@@ -451,29 +449,6 @@ extension Swift.Set where Element : TouchadSDK.BaseMappable {
   public init?(JSONArray: [[Swift.String : Any]], context: (any TouchadSDK.MapContext)? = nil)
   public func toJSON() -> [[Swift.String : Any]]
   public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
-}
-@objc @_inheritsConvenienceInitializers public class GeoTransPoint : ObjectiveC.NSObject {
-  @objc override dynamic public init()
-  public init(_ x: Swift.Double, _ y: Swift.Double)
-  public func GeoTransPoint(_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double)
-  public func getX() -> Swift.Double
-  public func getY() -> Swift.Double
-  @objc deinit
-}
-public class GeoTrans {
-  public static var GEO: Swift.Int
-  public static var KATEC: Swift.Int
-  public static var TM: Swift.Int
-  public static var GRS80: Swift.Int
-  public init()
-  public func convert(_ srctype: Swift.Int, _ dsttype: Swift.Int, _ in_pt: TouchadSDK.GeoTransPoint) -> TouchadSDK.GeoTransPoint
-  public static func geo2tm(_ dsttype: Swift.Int, _ in_pt: TouchadSDK.GeoTransPoint, _ out_pt: TouchadSDK.GeoTransPoint)
-  public static func tm2geo(_ srctype: Swift.Int, _ in_pt: TouchadSDK.GeoTransPoint, _ out_pt: TouchadSDK.GeoTransPoint)
-  public static func getDistancebyGeo(_ pt1: TouchadSDK.GeoTransPoint, _ pt2: TouchadSDK.GeoTransPoint) -> Swift.Double
-  public static func getDistancebyKatec(_ pt1: TouchadSDK.GeoTransPoint, _ pt2: TouchadSDK.GeoTransPoint) -> Swift.Double
-  public static func getDistancebyTm(_ pt1: TouchadSDK.GeoTransPoint, _ pt2: TouchadSDK.GeoTransPoint) -> Swift.Double
-  public static func getTimebyMin(_ distance: Swift.Double) -> Swift.Int
-  @objc deinit
 }
 public func <- <Transform>(left: inout Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
 public func >>> <Transform>(left: Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType

@@ -19697,7 +19697,7 @@
       "kind": "StringLiteral",
       "offset": 288,
       "length": 5,
-      "value": "\"2.0\""
+      "value": "\"2.1\""
     },
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAConstants.swift",
@@ -20486,7 +20486,7 @@
     {
       "filePath": "\/Users\/iyunpyo\/Desktop\/ios_TouchAd_sdk\/TouchadSDK\/Util\/TAGlobalManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 29022,
+      "offset": 29019,
       "length": 5,
       "value": "false"
     },

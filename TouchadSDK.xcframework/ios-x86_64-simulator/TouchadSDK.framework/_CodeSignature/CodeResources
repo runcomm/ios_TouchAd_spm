@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		/1WH9ZTuusAHLNwi+sO+pn0pT+I=
+		ZtOsWMFdBqW2CtwgXoTvv8/mWTY=
 		</data>
 		<key>CommonPickerPopupView.nib</key>
 		<data>
@@ -14,19 +14,19 @@
 		</data>
 		<key>CommonPopupView.nib</key>
 		<data>
-		K0VDZY/4WvQZXmZ6eEgPpixxqhM=
+		cFyVtFmKGxJ9Y9d3o+pYbQazHGk=
 		</data>
 		<key>CommonWebViewController.nib</key>
 		<data>
-		H0LYjHX24YuxHsD7vtLpzkfEVGU=
+		Z+/219EwFgVH9hbaUVFWf+eA8As=
 		</data>
 		<key>ErrorViewController.nib</key>
 		<data>
-		c2QuEUFLdyDI7fFWOujsMe4tKtk=
+		2wAzqL5edfIWDc4ytjfgxOepWzI=
 		</data>
 		<key>Headers/TouchadSDK-Swift.h</key>
 		<data>
-		XhnKh1KYBM7OqY/AlFb/6wuPrU8=
+		UeMZABIGo+AVhkPUyRTmtS0ZbS4=
 		</data>
 		<key>Headers/TouchadSDK.h</key>
 		<data>
@@ -34,27 +34,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZIEzaEgo/qR2Fajy09ihcLVeC1c=
+		CBdtPYIBzS+2cirbkusePKnRFao=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		1woqNnE92M63BsscSPCpjxVmNGE=
+		L1uh8lArF/6ENIeiJTo9w/gH0rQ=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		rzE6IGJtIPhDmuDYeGmShrWKfoQ=
+		xItUDki5RGJ3Hzs1XdpTeV5s2W4=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		/uDfH7uPZp8X24F0MTjN/Pnv3QU=
+		MSfJ83MGkBR8oTxhwFMbL6UcM8I=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		rzE6IGJtIPhDmuDYeGmShrWKfoQ=
+		xItUDki5RGJ3Hzs1XdpTeV5s2W4=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ex63jlhBx45pypZqm/i4brSbrOs=
+		88f7zmVUdxs2qlejsVJQcsUSl34=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -64,29 +64,17 @@
 		<data>
 		gkB/iUfZFoFsLfvvPILYeyVvcwA=
 		</data>
+		<key>PretendardStd-Bold.otf</key>
+		<data>
+		CeF4qUYYz7ct1CDWDAJeq8wJaCg=
+		</data>
+		<key>PretendardStd-Regular.otf</key>
+		<data>
+		qSnD/hbFjyHzSgbjhKEGPky6SLg=
+		</data>
 		<key>PromptCommonPopupView.nib</key>
 		<data>
-		7tcfU8gS8hZKREto5xsnlpvAnlU=
-		</data>
-		<key>sf-ui-display-bold-58646a511e3d9.otf</key>
-		<data>
-		fnvFRjcYOfYmG3qjYUp+4nChJQQ=
-		</data>
-		<key>sf-ui-display-medium-58646be638f96.otf</key>
-		<data>
-		ze3qdWNfTKlNx1iyyAIjNLW7HWs=
-		</data>
-		<key>sf-ui-display-semibold-58646eddcae92.otf</key>
-		<data>
-		jhR9Wm15AoEM+ufTC2N8hPnoMV8=
-		</data>
-		<key>spoqa-han-sans-neo-bold.otf</key>
-		<data>
-		0SvXzr9jOBWt2koiGr4wiEfrnns=
-		</data>
-		<key>spoqa-han-sans-neo-medium.otf</key>
-		<data>
-		sBtQ2H9/bUYBBUAHQb/+H/xOInw=
+		iZyjebIx6M3xY1LT7Xvrf+F4s5c=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -95,7 +83,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			x8Fj3CUjmMNe3JQj+YRBzdeQHZv0WMDCXEdD8VSMQfA=
+			gIU3GtoMUtDaFiMftv1KLiCnAysxzUbmGc8x2q9i8U0=
 			</data>
 		</dict>
 		<key>CommonPickerPopupView.nib</key>
@@ -109,28 +97,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EJ+wvdkSmABDON35wwiAfTiNz7Ma+qCmMCLJbP5xPr8=
+			+u2MAZwOLCh6iX3jU/20TsQvKQQxPeDL26dZOAVQl3Q=
 			</data>
 		</dict>
 		<key>CommonWebViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3lsPwtThhuxD7CiUiih1MCQdFTrn4flmfocSpoeByPA=
+			VV8xeJ4qvi6H697xnvPzVsRCOjxh6Fzpl0VDixtJl2A=
 			</data>
 		</dict>
 		<key>ErrorViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cuAKJqpGAQlPHz2bwzxiYIOehkGzAQd+SGBPBOa9ncU=
+			Q6DhGlfmvS+6uF7ihP3gudr2aXClLmmVFxn/I5ddwHU=
 			</data>
 		</dict>
 		<key>Headers/TouchadSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sUz97MQOr7rUOP8VrbFoa7oC8m6cdDZtq9HJs5OlAQo=
+			f6nz+R3jS3OtHfqCbFz9YBO//HTCQM9PdqnApEcSLzc=
 			</data>
 		</dict>
 		<key>Headers/TouchadSDK.h</key>
@@ -144,35 +132,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/Q2USXmCsMv+cmpUC6+IfSdsU1SWwO5S/M15jAoJzJc=
+			mvqPU2FmHDPSsMN6WeAhlyIEoAJIfLtQ9qbUaULstFo=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qt/GgYYVJYe5h1hUTZ/sf3R+JhIKm+4jEU8/ckWk1Wg=
+			QMQzNaf7L5m7sveAUfZJNn4c7gz04cmovJSFQbqow5Y=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9RNBsQcZ4OTRp2XgHLtWEj5oiVOd72uHU/gPOcM2BEg=
+			77VJVuEL8eimHSbaPmAP/+ex7NM2zpHUydSZ+o+Rxo4=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qt/GgYYVJYe5h1hUTZ/sf3R+JhIKm+4jEU8/ckWk1Wg=
+			QMQzNaf7L5m7sveAUfZJNn4c7gz04cmovJSFQbqow5Y=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			blAJWKuGcWMhsCv1QKXxKh8KT6c31JlZ9TkcZSurVNw=
+			FQKEG5icBTECIZgzXMZhTCsNUk/mN7pA+dxz7F5AbsQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -189,46 +177,25 @@
 			d5z0U+orky7HknsYMrRYXM1K0DWjJrsuvF4/XHK/LfA=
 			</data>
 		</dict>
+		<key>PretendardStd-Bold.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dPLDJwqNGHvtW9DYQ0puXPeqYKnetYs7eKTIHzLQO2Q=
+			</data>
+		</dict>
+		<key>PretendardStd-Regular.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mhLW1d/TUvKLURcGqQ7nzE1D3XRFUUpL0NrhUtC3PS0=
+			</data>
+		</dict>
 		<key>PromptCommonPopupView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CM3nFH0T1O6b4mFZGdNEUXmtz0SuFL3K1F7C6xvYER0=
-			</data>
-		</dict>
-		<key>sf-ui-display-bold-58646a511e3d9.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mtayVf31wVoitzunWKWLbsUlhdkwCiUsexsp8rgb0Ho=
-			</data>
-		</dict>
-		<key>sf-ui-display-medium-58646be638f96.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DuFXf4SaRtehtrX4SsMZNdboGSVNyiPGsuk1y7g6BUU=
-			</data>
-		</dict>
-		<key>sf-ui-display-semibold-58646eddcae92.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			kqbHmhELPsWSvwO+Igoc9gAphCljfksalZNOdNqLVlQ=
-			</data>
-		</dict>
-		<key>spoqa-han-sans-neo-bold.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			EBbvsbGgTFnXt9WSeHjC5ETiXduy32Q1ForsskFkcj8=
-			</data>
-		</dict>
-		<key>spoqa-han-sans-neo-medium.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mt2dTKookM1UtEayUaF5oc8cck25kJJze4MbmCZUoW0=
+			ieux4pS97ns6RxkJhKMmJ3DL/UrUKQSoxNAZN1LnYUU=
 			</data>
 		</dict>
 	</dict>

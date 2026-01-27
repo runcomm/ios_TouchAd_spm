@@ -1,11 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -module-name TouchadSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.1 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name TouchadSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import AVFoundation
 import AdSupport
 import AppTrackingTransparency
 import CoreTelephony
+import CoreText
 import DeveloperToolsSupport
 import Foundation
 import Swift
@@ -23,7 +24,9 @@ public struct MapError : Swift.Error, @unchecked Swift.Sendable {
   public var file: Swift.StaticString?
   public var function: Swift.StaticString?
   public var line: Swift.UInt?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(key: Swift.String?, currentValue: Any?, reason: Swift.String?, file: Swift.StaticString? = nil, function: Swift.StaticString? = nil, line: Swift.UInt? = nil)
+  #endif
 }
 extension TouchadSDK.MapError : Swift.CustomStringConvertible {
   public var description: Swift.String {
@@ -32,16 +35,28 @@ extension TouchadSDK.MapError : Swift.CustomStringConvertible {
 }
 public func <- <T>(left: inout T, right: TouchadSDK.Map) where T : Swift.RawRepresentable
 public func >>> <T>(left: T, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout T?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: T?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+#endif
 public func <- <T>(left: inout [T], right: TouchadSDK.Map) where T : Swift.RawRepresentable
 public func >>> <T>(left: [T], right: TouchadSDK.Map) where T : Swift.RawRepresentable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout [T]?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: [T]?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+#endif
 public func <- <T>(left: inout [Swift.String : T], right: TouchadSDK.Map) where T : Swift.RawRepresentable
 public func >>> <T>(left: [Swift.String : T], right: TouchadSDK.Map) where T : Swift.RawRepresentable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout [Swift.String : T]?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: [Swift.String : T]?, right: TouchadSDK.Map) where T : Swift.RawRepresentable
+#endif
 extension Foundation.DateFormatter {
   convenience public init(withFormat format: Swift.String, locale: Swift.String)
 }
@@ -56,9 +71,11 @@ public enum JWTDecodeError : Foundation.LocalizedError, Swift.CustomDebugStringC
   public var localizedDescription: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
   public var debugDescription: Swift.String {
     get
   }
@@ -85,7 +102,9 @@ final public class Map {
   final public var context: (any TouchadSDK.MapContext)?
   final public var shouldIncludeNilValues: Swift.Bool
   final public let toObject: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(mappingType: TouchadSDK.MappingType, JSON: [Swift.String : Any], toObject: Swift.Bool = false, context: (any TouchadSDK.MapContext)? = nil, shouldIncludeNilValues: Swift.Bool = false)
+  #endif
   final public subscript(key: Swift.String) -> TouchadSDK.Map {
     get
   }
@@ -107,10 +126,14 @@ final public class Map {
   final public subscript(key: Swift.String, nested nested: Swift.Bool, ignoreNil ignoreNil: Swift.Bool) -> TouchadSDK.Map {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   final public subscript(key: Swift.String, nested nested: Swift.Bool?, delimiter delimiter: Swift.String, ignoreNil ignoreNil: Swift.Bool) -> TouchadSDK.Map {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>() -> T?
+  #endif
   @objc deinit
 }
 extension TouchadSDK.Map {
@@ -123,44 +146,72 @@ open class NSDecimalNumberTransform : TouchadSDK.TransformType {
   public typealias Object = Foundation.NSDecimalNumber
   public typealias JSON = Swift.String
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.NSDecimalNumber?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.NSDecimalNumber?) -> Swift.String?
+  #endif
   @objc deinit
 }
 public func decode(jwt: Swift.String) throws -> any TouchadSDK.JWT
 public struct Claim {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var rawValue: Any? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var string: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var boolean: Swift.Bool? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var double: Swift.Double? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var integer: Swift.Int? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var date: Foundation.Date? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var array: [Swift.String]? {
     get
   }
+  #endif
 }
 public func <- <T>(left: inout T, right: TouchadSDK.Map) where T : Swift.SignedInteger
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout T?, right: TouchadSDK.Map) where T : Swift.SignedInteger
+#endif
 public func <- <T>(left: inout T, right: TouchadSDK.Map) where T : Swift.UnsignedInteger
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout T?, right: TouchadSDK.Map) where T : Swift.UnsignedInteger
+#endif
 open class TransformOf<ObjectType, JSONType> : TouchadSDK.TransformType {
   public typealias Object = ObjectType
   public typealias JSON = JSONType
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(fromJSON: @escaping (JSONType?) -> ObjectType?, toJSON: @escaping (ObjectType?) -> JSONType?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> ObjectType?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: ObjectType?) -> JSONType?
+  #endif
   @objc deinit
 }
 open class DateTransform : TouchadSDK.TransformType {
@@ -169,47 +220,81 @@ open class DateTransform : TouchadSDK.TransformType {
   public enum Unit : Foundation.TimeInterval {
     case seconds
     case milliseconds
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Foundation.TimeInterval)
+    #endif
     public typealias RawValue = Foundation.TimeInterval
     public var rawValue: Foundation.TimeInterval {
       get
     }
   }
   public init(unit: TouchadSDK.DateTransform.Unit = .seconds)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.Date?) -> Swift.Double?
+  #endif
   @objc deinit
 }
 infix operator <- : DefaultPrecedence
 infix operator >>> : DefaultPrecedence
 public func <- <T>(left: inout T, right: TouchadSDK.Map)
 public func >>> <T>(left: T, right: TouchadSDK.Map)
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout T?, right: TouchadSDK.Map)
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: T?, right: TouchadSDK.Map)
+#endif
 public func <- <T>(left: inout T, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
 public func >>> <T>(left: T, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout T?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: T?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
 public func <- <T>(left: inout Swift.Dictionary<Swift.String, T>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
 public func >>> <T>(left: Swift.Dictionary<Swift.String, T>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout Swift.Dictionary<Swift.String, T>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: Swift.Dictionary<Swift.String, T>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
 public func <- <T>(left: inout Swift.Dictionary<Swift.String, [T]>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
 public func >>> <T>(left: Swift.Dictionary<Swift.String, [T]>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout Swift.Dictionary<Swift.String, [T]>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: Swift.Dictionary<Swift.String, [T]>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
 public func <- <T>(left: inout Swift.Array<T>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
 public func >>> <T>(left: Swift.Array<T>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout Swift.Array<T>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: Swift.Array<T>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
 public func <- <T>(left: inout Swift.Array<Swift.Array<T>>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
 public func >>> <T>(left: Swift.Array<Swift.Array<T>>, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout Swift.Array<Swift.Array<T>>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: Swift.Array<Swift.Array<T>>?, right: TouchadSDK.Map) where T : TouchadSDK.BaseMappable
+#endif
 public func <- <T>(left: inout Swift.Set<T>, right: TouchadSDK.Map) where T : Swift.Hashable, T : TouchadSDK.BaseMappable
 public func >>> <T>(left: Swift.Set<T>, right: TouchadSDK.Map) where T : Swift.Hashable, T : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <T>(left: inout Swift.Set<T>?, right: TouchadSDK.Map) where T : Swift.Hashable, T : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <T>(left: Swift.Set<T>?, right: TouchadSDK.Map) where T : Swift.Hashable, T : TouchadSDK.BaseMappable
+#endif
 public enum MappingType {
   case fromJSON
   case toJSON
@@ -222,78 +307,144 @@ public enum MappingType {
 final public class Mapper<N> where N : TouchadSDK.BaseMappable {
   final public var context: (any TouchadSDK.MapContext)?
   final public var shouldIncludeNilValues: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(context: (any TouchadSDK.MapContext)? = nil, shouldIncludeNilValues: Swift.Bool = false)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func map(JSONObject: Any?, toObject object: N) -> N
+  #endif
   final public func map(JSONString: Swift.String, toObject object: N) -> N
   final public func map(JSON: [Swift.String : Any], toObject object: N) -> N
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func map(JSONString: Swift.String) -> N?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func map(JSONObject: Any?) -> N?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func map(JSON: [Swift.String : Any]) -> N?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapArray(JSONString: Swift.String) -> [N]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapArray(JSONObject: Any?) -> [N]?
+  #endif
   final public func mapArray(JSONArray: [[Swift.String : Any]]) -> [N]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapDictionary(JSONString: Swift.String) -> [Swift.String : N]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapDictionary(JSONObject: Any?) -> [Swift.String : N]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapDictionary(JSON: [Swift.String : [Swift.String : Any]]) -> [Swift.String : N]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapDictionary(JSONObject: Any?, toDictionary dictionary: [Swift.String : N]) -> [Swift.String : N]
+  #endif
   final public func mapDictionary(JSON: [Swift.String : [Swift.String : Any]], toDictionary dictionary: [Swift.String : N]) -> [Swift.String : N]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapDictionaryOfArrays(JSONObject: Any?) -> [Swift.String : [N]]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapDictionaryOfArrays(JSON: [Swift.String : [[Swift.String : Any]]]) -> [Swift.String : [N]]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapArrayOfArrays(JSONObject: Any?) -> [[N]]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func parseJSONStringIntoDictionary(JSONString: Swift.String) -> [Swift.String : Any]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func parseJSONString(JSONString: Swift.String) -> Any?
+  #endif
   @objc deinit
 }
 extension TouchadSDK.Mapper {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func map(JSONfile: Swift.String) -> N?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapArray(JSONfile: Swift.String) -> [N]?
+  #endif
 }
 extension TouchadSDK.Mapper {
   final public func toJSON(_ object: N) -> [Swift.String : Any]
   final public func toJSONArray(_ array: [N]) -> [[Swift.String : Any]]
   final public func toJSONDictionary(_ dictionary: [Swift.String : N]) -> [Swift.String : [Swift.String : Any]]
   final public func toJSONDictionaryOfArrays(_ dictionary: [Swift.String : [N]]) -> [Swift.String : [[Swift.String : Any]]]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func toJSONString(_ object: N, prettyPrint: Swift.Bool = false) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func toJSONString(_ array: [N], prettyPrint: Swift.Bool = false) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func toJSONString(_ JSONObject: Any, prettyPrint: Swift.Bool) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func toJSONData(_ JSONObject: Any, options: Foundation.JSONSerialization.WritingOptions) -> Foundation.Data?
+  #endif
 }
 extension TouchadSDK.Mapper where N : Swift.Hashable {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapSet(JSONString: Swift.String) -> Swift.Set<N>?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapSet(JSONObject: Any?) -> Swift.Set<N>?
+  #endif
   final public func mapSet(JSONArray: [[Swift.String : Any]]) -> Swift.Set<N>
   final public func toJSONSet(_ set: Swift.Set<N>) -> [[Swift.String : Any]]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func toJSONString(_ set: Swift.Set<N>, prettyPrint: Swift.Bool = false) -> Swift.String?
+  #endif
 }
 open class DateFormatterTransform : TouchadSDK.TransformType {
   public typealias Object = Foundation.Date
   public typealias JSON = Swift.String
   final public let dateFormatter: Foundation.DateFormatter
   public init(dateFormatter: Foundation.DateFormatter)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.Date?) -> Swift.String?
+  #endif
   @objc deinit
 }
 open class EnumTransform<T> : TouchadSDK.TransformType where T : Swift.RawRepresentable {
   public typealias Object = T
   public typealias JSON = T.RawValue
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> T?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: T?) -> T.RawValue?
+  #endif
   @objc deinit
 }
 public protocol TransformType {
   associatedtype Object
   associatedtype JSON
+  #if compiler(>=5.3) && $NonescapableTypes
   func transformFromJSON(_ value: Any?) -> Self.Object?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func transformToJSON(_ value: Self.Object?) -> Self.JSON?
+  #endif
 }
 open class URLTransform : TouchadSDK.TransformType {
   public typealias Object = Foundation.URL
   public typealias JSON = Swift.String
   public init(shouldEncodeURLString: Swift.Bool = false, allowedCharacterSet: Foundation.CharacterSet = .urlQueryAllowed)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.URL?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.URL?) -> Swift.String?
+  #endif
   @objc deinit
 }
 open class CustomDateFormatTransform : TouchadSDK.DateFormatterTransform {
@@ -309,7 +460,9 @@ open class CustomDateFormatTransform : TouchadSDK.DateFormatterTransform {
     set(value)
   }
   public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String, pushToken: Swift.String?)
+  #endif
   @_Concurrency.MainActor @objc public static func openBCPlusMoneyMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
   @_Concurrency.MainActor @objc public static func openBCPlusBannerMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
   @_Concurrency.MainActor @objc public static func openBCPlusMainMenu(_ isProd: Swift.Bool, _ isModal: Swift.Bool = false, _ mbrId: Swift.String)
@@ -320,8 +473,12 @@ open class DataTransform : TouchadSDK.TransformType {
   public typealias Object = Foundation.Data
   public typealias JSON = Swift.String
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.Data?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.Data?) -> Swift.String?
+  #endif
   @objc deinit
 }
 public protocol ImmutableMappable : TouchadSDK.BaseMappable {
@@ -329,28 +486,68 @@ public protocol ImmutableMappable : TouchadSDK.BaseMappable {
 }
 extension TouchadSDK.ImmutableMappable {
   public func mapping(map: TouchadSDK.Map)
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(JSONString: Swift.String, context: (any TouchadSDK.MapContext)? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(JSON: [Swift.String : Any], context: (any TouchadSDK.MapContext)? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(JSONObject: Any, context: (any TouchadSDK.MapContext)? = nil) throws
+  #endif
 }
 extension TouchadSDK.Map {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> Transform.Object where Transform : TouchadSDK.TransformType
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T where T : Swift.RawRepresentable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T? where T : Swift.RawRepresentable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T] where T : Swift.RawRepresentable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T]? where T : Swift.RawRepresentable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T where T : TouchadSDK.BaseMappable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> T? where T : TouchadSDK.BaseMappable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T] where T : TouchadSDK.BaseMappable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [T]? where T : TouchadSDK.BaseMappable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Transform.Object] where Transform : TouchadSDK.TransformType
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Swift.String : T] where T : TouchadSDK.BaseMappable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Swift.String : T]? where T : TouchadSDK.BaseMappable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [Swift.String : Transform.Object] where Transform : TouchadSDK.TransformType
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [[T]]? where T : TouchadSDK.BaseMappable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<T>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [[T]] where T : TouchadSDK.BaseMappable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func value<Transform>(_ key: Swift.String, nested: Swift.Bool? = nil, delimiter: Swift.String = ".", using transform: Transform, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line) throws -> [[Transform.Object]] where Transform : TouchadSDK.TransformType
+  #endif
 }
 extension TouchadSDK.Mapper where N : TouchadSDK.ImmutableMappable {
   final public func map(JSON: [Swift.String : Any]) throws -> N
@@ -360,39 +557,69 @@ extension TouchadSDK.Mapper where N : TouchadSDK.ImmutableMappable {
   final public func mapArray(JSONString: Swift.String) throws -> [N]
   final public func mapArray(JSONObject: Any) throws -> [N]
   final public func mapDictionary(JSONString: Swift.String) throws -> [Swift.String : N]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapDictionary(JSONObject: Any?) throws -> [Swift.String : N]
+  #endif
   final public func mapDictionary(JSON: [Swift.String : [Swift.String : Any]]) throws -> [Swift.String : N]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapDictionaryOfArrays(JSONObject: Any?) throws -> [Swift.String : [N]]
+  #endif
   final public func mapDictionaryOfArrays(JSON: [Swift.String : [[Swift.String : Any]]]) throws -> [Swift.String : [N]]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func mapArrayOfArrays(JSONObject: Any?) throws -> [[N]]
+  #endif
 }
 open class HexColorTransform : TouchadSDK.TransformType {
   public typealias Object = UIKit.UIColor
   public typealias JSON = Swift.String
   public init(prefixToJSON: Swift.Bool = false, alphaToJSON: Swift.Bool = false)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> TouchadSDK.HexColorTransform.Object?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: TouchadSDK.HexColorTransform.Object?) -> TouchadSDK.HexColorTransform.JSON?
+  #endif
   @objc deinit
 }
 public struct DictionaryTransform<Key, Value> : TouchadSDK.TransformType where Key : Swift.Hashable, Key : Swift.RawRepresentable, Value : TouchadSDK.Mappable, Key.RawValue == Swift.String {
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func transformFromJSON(_ value: Any?) -> [Key : Value]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func transformToJSON(_ value: [Key : Value]?) -> Any?
+  #endif
   public typealias JSON = Any
   public typealias Object = [Key : Value]
 }
 public protocol JWT {
   var header: [Swift.String : Any] { get }
   var body: [Swift.String : Any] { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var signature: Swift.String? { get }
+  #endif
   var string: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var expiresAt: Foundation.Date? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var issuer: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var subject: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var audience: [Swift.String]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var issuedAt: Foundation.Date? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var notBefore: Foundation.Date? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var identifier: Swift.String? { get }
+  #endif
   var expired: Swift.Bool { get }
 }
 extension TouchadSDK.JWT {
@@ -408,84 +635,150 @@ extension UIKit.UIDatePicker {
   }
 }
 extension UIKit.UIWindow {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var visibleViewController: UIKit.UIViewController? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func visibleViewControllerFrom(vc: UIKit.UIViewController? = UIApplication.shared.windows.first(where: {$0.isKeyWindow})?.rootViewController) -> UIKit.UIViewController?
+  #endif
 }
 open class CodableTransform<T> : TouchadSDK.TransformType where T : Swift.Decodable, T : Swift.Encodable {
   public typealias Object = T
   public typealias JSON = Any
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> TouchadSDK.CodableTransform<T>.Object?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: T?) -> Any?
+  #endif
   @objc deinit
 }
 public protocol BaseMappable {
   mutating func mapping(map: TouchadSDK.Map)
 }
 public protocol Mappable : TouchadSDK.BaseMappable {
+  #if compiler(>=5.3) && $NonescapableTypes
   init?(map: TouchadSDK.Map)
+  #endif
 }
 public protocol StaticMappable : TouchadSDK.BaseMappable {
+  #if compiler(>=5.3) && $NonescapableTypes
   static func objectForMapping(map: TouchadSDK.Map) -> (any TouchadSDK.BaseMappable)?
+  #endif
 }
 extension TouchadSDK.Mappable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(JSONString: Swift.String, context: (any TouchadSDK.MapContext)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(JSON: [Swift.String : Any], context: (any TouchadSDK.MapContext)? = nil)
+  #endif
 }
 extension TouchadSDK.BaseMappable {
   public func toJSON() -> [Swift.String : Any]
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+  #endif
 }
 extension Swift.Array where Element : TouchadSDK.BaseMappable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(JSONString: Swift.String, context: (any TouchadSDK.MapContext)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(JSONArray: [[Swift.String : Any]], context: (any TouchadSDK.MapContext)? = nil)
+  #endif
   public func toJSON() -> [[Swift.String : Any]]
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+  #endif
 }
 extension Swift.Set where Element : TouchadSDK.BaseMappable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(JSONString: Swift.String, context: (any TouchadSDK.MapContext)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(JSONArray: [[Swift.String : Any]], context: (any TouchadSDK.MapContext)? = nil)
+  #endif
   public func toJSON() -> [[Swift.String : Any]]
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+  #endif
 }
 public func <- <Transform>(left: inout Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
 public func >>> <Transform>(left: Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <Transform>(left: inout Transform.Object?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <Transform>(left: Transform.Object?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#endif
 public func <- <Transform>(left: inout [Transform.Object], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
 public func >>> <Transform>(left: [Transform.Object], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <Transform>(left: inout [Transform.Object]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <Transform>(left: [Transform.Object]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#endif
 public func <- <Transform>(left: inout [Swift.String : Transform.Object], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
 public func >>> <Transform>(left: [Swift.String : Transform.Object], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <Transform>(left: inout [Swift.String : Transform.Object]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <Transform>(left: [Swift.String : Transform.Object]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#endif
 public func <- <Transform>(left: inout Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
 public func >>> <Transform>(left: Transform.Object, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <Transform>(left: inout Transform.Object?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <Transform>(left: Transform.Object?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#endif
 public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
 public func >>> <Transform>(left: Swift.Dictionary<Swift.String, Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <Transform>(left: Swift.Dictionary<Swift.String, Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#endif
 public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, [Transform.Object]>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
 public func >>> <Transform>(left: Swift.Dictionary<Swift.String, [Transform.Object]>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <Transform>(left: inout Swift.Dictionary<Swift.String, [Transform.Object]>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <Transform>(left: Swift.Dictionary<Swift.String, [Transform.Object]>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#endif
 public func <- <Transform>(left: inout Swift.Array<Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
 public func >>> <Transform>(left: Swift.Array<Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <Transform>(left: inout Swift.Array<Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <Transform>(left: Swift.Array<Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : TouchadSDK.BaseMappable
+#endif
 public func <- <Transform>(left: inout [[Transform.Object]], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
 public func >>> <Transform>(left: [[Transform.Object]], right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <Transform>(left: inout [[Transform.Object]]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <Transform>(left: [[Transform.Object]]?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType
+#endif
 public func <- <Transform>(left: inout Swift.Set<Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : Swift.Hashable, Transform.Object : TouchadSDK.BaseMappable
 public func >>> <Transform>(left: Swift.Set<Transform.Object>, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : Swift.Hashable, Transform.Object : TouchadSDK.BaseMappable
+#if compiler(>=5.3) && $NonescapableTypes
 public func <- <Transform>(left: inout Swift.Set<Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : Swift.Hashable, Transform.Object : TouchadSDK.BaseMappable
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func >>> <Transform>(left: Swift.Set<Transform.Object>?, right: (TouchadSDK.Map, Transform)) where Transform : TouchadSDK.TransformType, Transform.Object : Swift.Hashable, Transform.Object : TouchadSDK.BaseMappable
+#endif
 extension TouchadSDK.DateTransform.Unit : Swift.Equatable {}
 extension TouchadSDK.DateTransform.Unit : Swift.Hashable {}
 extension TouchadSDK.DateTransform.Unit : Swift.RawRepresentable {}

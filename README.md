@@ -20,12 +20,12 @@ https://github.com/runcomm/ios_TouchAd_spm.git
 
 Dependency Rule : Exact Version 
 
-Version : 0.0.12
+Version : 0.0.13
 
 Add to Project : BC앱프로젝트
 ```
 
-* Alamofire SPM
+* Alamofire SPM(AlamofireDynamic 변경 요청으로 2026년 3월 31일 적용)
 ```
 https://github.com/Alamofire/Alamofire.git
 
@@ -33,15 +33,15 @@ Dependency Rule : Exact Version
 
 Version : 5.9.0
 
-Add to Project : BC앱프로젝트
+Add to Project : BC앱프로젝트(AlamofireDynamic)
 ```
 
 2. **Package Dependencies 확인**
 * 프로젝트 > Package Dependencies 메뉴 > Package 확인
 ```
-TouchadSDK 0.0.12
+TouchadSDK 0.0.13
 
-Alamofire 5.9.0
+Alamofire 5.9.0 (AlamofireDynamic)
 ```
 
 ## 권한 설정

@@ -34,11 +34,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ylESyeeIUMHpjfNvbj37D6VqrtI=
+		xsX9oejm73FCmUAnw15oyuJLsIc=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		gNcdTOdXcEEASczG/rK8ZSWqsBQ=
+		5zJ8NyL6AqXLnDqcjhKKE+5WOBQ=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		2Yf9Kn1ACyssHCfglA6wnvwmclE=
+		QmM22DV3jhsMSzcI4PYwWqtE47Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -132,7 +132,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9FrGNMxn2U17G8pfzeMPrGh2bmCGRCWhE4lPZVr0AK0=
+			BYBIpMKR3rLIlmZ8z9lTnXaRKC/dFgSYXwglyZQRZVE=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -160,7 +160,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			s5Hiix68ngtSNdbwBXIQDcGTBKWJZnM3SJ/fg4F89As=
+			yJR0Asq0ZOJlnaioq002b+6n80kIyAF5FFISYd+9LLg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

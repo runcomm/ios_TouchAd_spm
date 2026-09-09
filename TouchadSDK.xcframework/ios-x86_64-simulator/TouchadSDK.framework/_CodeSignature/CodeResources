@@ -6,27 +6,23 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		ZtOsWMFdBqW2CtwgXoTvv8/mWTY=
-		</data>
-		<key>CommonPickerPopupView.nib</key>
-		<data>
-		F30k/5btNFCXT0OEQ3XKj7Nt+R4=
+		VJiVBOiBjZE2f4/XtTif60JzIxU=
 		</data>
 		<key>CommonPopupView.nib</key>
 		<data>
-		cFyVtFmKGxJ9Y9d3o+pYbQazHGk=
+		1lyhv5k9ms2oWiFmnTIMhoM2gVY=
 		</data>
 		<key>CommonWebViewController.nib</key>
 		<data>
-		Z+/219EwFgVH9hbaUVFWf+eA8As=
+		m2eNaN2ohSCUKSN/5GGTViObMV8=
 		</data>
 		<key>ErrorViewController.nib</key>
 		<data>
-		2wAzqL5edfIWDc4ytjfgxOepWzI=
+		KwuoNK8CWGviIzglRHS4nkbePWM=
 		</data>
 		<key>Headers/TouchadSDK-Swift.h</key>
 		<data>
-		UeMZABIGo+AVhkPUyRTmtS0ZbS4=
+		OQ/ceuXtaL7iW84rH+yA57z0R84=
 		</data>
 		<key>Headers/TouchadSDK.h</key>
 		<data>
@@ -34,47 +30,43 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1i+uIeqp/+zIk6F1SO0ZbAqS7/k=
+		yPFOlS8uIdaKUzM+BBT6tFHS8mQ=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		9eD/ZvOLEy1Yg661Eg2ny8JTs9g=
+		BiZobenz1CEq5oRgtDuJ3aeZtiQ=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		xItUDki5RGJ3Hzs1XdpTeV5s2W4=
+		AjM93Nb0tmuL+GmMjL5BcVHb8I0=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MSfJ83MGkBR8oTxhwFMbL6UcM8I=
+		cYlDCKlBJVhfSVieHvNylXtPEjM=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		xItUDki5RGJ3Hzs1XdpTeV5s2W4=
+		AjM93Nb0tmuL+GmMjL5BcVHb8I0=
 		</data>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		h0epq0WRBKDw59H8bGKBUz3nI2U=
+		8t0AHHYJSXpZ/XYrr8WBVmM/Oj8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		7tL+zbGlrQVNRF1dCEAJEdiCsrE=
+		i30j8/Ly/whD1cYeB6fpuGopyAY=
+		</data>
+		<key>NEXON Lv2 Gothic OTF.otf</key>
+		<data>
+		OzqItvIGrPbEiFlrbLwaCqD05X8=
 		</data>
 		<key>PopupWebViewController.nib</key>
 		<data>
 		gkB/iUfZFoFsLfvvPILYeyVvcwA=
 		</data>
-		<key>PretendardStd-Bold.otf</key>
-		<data>
-		CeF4qUYYz7ct1CDWDAJeq8wJaCg=
-		</data>
-		<key>PretendardStd-Regular.otf</key>
-		<data>
-		qSnD/hbFjyHzSgbjhKEGPky6SLg=
-		</data>
 		<key>PromptCommonPopupView.nib</key>
 		<data>
-		iZyjebIx6M3xY1LT7Xvrf+F4s5c=
+		FLs44QpqH0LvWYXc3ZSNwqcqMWc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -83,42 +75,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gIU3GtoMUtDaFiMftv1KLiCnAysxzUbmGc8x2q9i8U0=
-			</data>
-		</dict>
-		<key>CommonPickerPopupView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vCmQY4SJ/zjBboUPpfX7yaeYxKfmamwNo7ipZ9tVx1s=
+			sA5x6xiZ2dDdNWlIvWZy6+TRLdYs4keDNj3d1NytY8A=
 			</data>
 		</dict>
 		<key>CommonPopupView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+u2MAZwOLCh6iX3jU/20TsQvKQQxPeDL26dZOAVQl3Q=
+			+AiKMMosT0ArsFW5yW7L0b07rK75IkrYw+MuWXUUo+0=
 			</data>
 		</dict>
 		<key>CommonWebViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VV8xeJ4qvi6H697xnvPzVsRCOjxh6Fzpl0VDixtJl2A=
+			dea+b+49hZU06eTYxFIzOxuXvBL8mz3PgvMjPO7jSnk=
 			</data>
 		</dict>
 		<key>ErrorViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q6DhGlfmvS+6uF7ihP3gudr2aXClLmmVFxn/I5ddwHU=
+			1a6BJGzZUmDvZpB4D1ZM5dG0d1L0WT1n7dzqlHnsIG8=
 			</data>
 		</dict>
 		<key>Headers/TouchadSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f6nz+R3jS3OtHfqCbFz9YBO//HTCQM9PdqnApEcSLzc=
+			3Xa4iGrqRDrVTkVKI7rBSDqRIrDCwK05LkzgW2690cM=
 			</data>
 		</dict>
 		<key>Headers/TouchadSDK.h</key>
@@ -132,42 +117,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2lme5TIFHDPpsZBZZNYGgWpoytLQJc6aV/cvRT0v/uw=
+			hTIDpmWjClfYDKu5bSy5jfqmcHO0qhoUb2N4nQ1VmvQ=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QMQzNaf7L5m7sveAUfZJNn4c7gz04cmovJSFQbqow5Y=
+			pvhzvmA8TJUZGUl4Lq9RbQ+VW7pmLh21AfKXOahuK/o=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			77VJVuEL8eimHSbaPmAP/+ex7NM2zpHUydSZ+o+Rxo4=
+			EVGwdrszgqfm0DV8I/I8wB/ybxT0xKpwc6kPDGM9Yz8=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QMQzNaf7L5m7sveAUfZJNn4c7gz04cmovJSFQbqow5Y=
+			pvhzvmA8TJUZGUl4Lq9RbQ+VW7pmLh21AfKXOahuK/o=
 			</data>
 		</dict>
 		<key>Modules/TouchadSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BlknRtVG02ZVTg/LV2Y2fD8yhZgxKtbNmmDruXueQs0=
+			yS/nBt/Qiik8/MV4DkQ9me+rptkYjanrDc0IN0Wddag=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ueANdecpk37VQjh5e9nuJo+UTRNeaUYfGF1Ll+k1UYo=
+			lqtaEZgCywE8XUcnbSqjPojgiAqRsoriK9KdWXhHmsk=
+			</data>
+		</dict>
+		<key>NEXON Lv2 Gothic OTF.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8ArfoFWeuwDqktSQ7IaVqTMDcsd4irCbdLyVmopDLY0=
 			</data>
 		</dict>
 		<key>PopupWebViewController.nib</key>
@@ -177,25 +169,11 @@
 			d5z0U+orky7HknsYMrRYXM1K0DWjJrsuvF4/XHK/LfA=
 			</data>
 		</dict>
-		<key>PretendardStd-Bold.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dPLDJwqNGHvtW9DYQ0puXPeqYKnetYs7eKTIHzLQO2Q=
-			</data>
-		</dict>
-		<key>PretendardStd-Regular.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mhLW1d/TUvKLURcGqQ7nzE1D3XRFUUpL0NrhUtC3PS0=
-			</data>
-		</dict>
 		<key>PromptCommonPopupView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ieux4pS97ns6RxkJhKMmJ3DL/UrUKQSoxNAZN1LnYUU=
+			RmMt6AJ7jZ/GKoOVPDUgx3RAGGB3GJE2q0tgAU7nWQ0=
 			</data>
 		</dict>
 	</dict>

@@ -18,9 +18,12 @@
 ```
 https://github.com/runcomm/ios_TouchAd_spm.git
 
-Dependency Rule : Exact Version 
+Dependency Rule : Branch 
 
-Version : 0.0.1
+Branch Name
+  1. 개발서버 : dev_geto
+  2. 스테이지서버 : qa_geto
+  3. 상용서버 : prod_geto
 
 Add to Project : GETO앱 프로젝트
 ```
@@ -61,7 +64,10 @@ Add to Project : GETO앱 프로젝트
 2. **Package Dependencies 확인**
 * 프로젝트 > Package Dependencies 메뉴 > Package 확인
 ```
-TouchadSDK 0.0.1
+TouchadSDK
+  1. 개발서버 : dev_geto
+  2. 스테이지서버 : qa_geto
+  3. 상용서버 : prod_geto
 
 Alamofire 5.12.0
 

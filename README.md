@@ -1,4 +1,4 @@
-#  TouchAd SDK  for BC 페이북 설치 가이드
+#  TouchAd SDK  for GETO 설치 가이드
 
 * 정상적인 제휴서비스를 위한 터치애드SDK 설치과정을 설명합니다.
 * 샘플 프로젝트를 참조하면 좀 더 쉽게 설치 가능합니다.
@@ -13,35 +13,61 @@
 * PROJECT 프로젝트아이콘 클릭 
 * Packages 메뉴 + 버튼 클릭
 * 팝업화면 > Github 선택 > Search or Enter Package URL > 아래주소 입력
-* 아래 두개의 패키지를 추가하셔야 합니다.
+* 아래 네개의 패키지를 추가하셔야 합니다.
 * TouchadSDK SPM
 ```
 https://github.com/runcomm/ios_TouchAd_spm.git
 
 Dependency Rule : Exact Version 
 
-Version : 0.0.13
+Version : 0.0.1
 
-Add to Project : BC앱프로젝트
+Add to Project : GETO앱 프로젝트
 ```
 
-* Alamofire SPM(AlamofireDynamic 변경 요청으로 2026년 3월 31일 적용)
+* Alamofire SPM
 ```
 https://github.com/Alamofire/Alamofire.git
 
 Dependency Rule : Exact Version 
 
-Version : 5.9.0
+Version : 5.12.0
 
-Add to Project : BC앱프로젝트(AlamofireDynamic)
+Add to Project : GETO앱 프로젝트
+```
+
+* JWTDecode SPM
+```
+https://github.com/auth0/JWTDecode.swift
+
+Dependency Rule : Exact Version 
+
+Version : 4.0.0
+
+Add to Project : GETO앱 프로젝트
+```
+
+* ObjectMapper SPM
+```
+https://github.com/tristanhimmelman/ObjectMapper.git
+
+Dependency Rule : Exact Version 
+
+Version : 4.4.3
+
+Add to Project : GETO앱 프로젝트
 ```
 
 2. **Package Dependencies 확인**
 * 프로젝트 > Package Dependencies 메뉴 > Package 확인
 ```
-TouchadSDK 0.0.13
+TouchadSDK 0.0.1
 
-Alamofire 5.9.0 (AlamofireDynamic)
+Alamofire 5.12.0
+
+JWTDecode 4.0.0
+
+ObjectMapper 4.4.3
 ```
 
 ## 권한 설정
@@ -125,79 +151,118 @@ func requestPermission() {
 public class TASDKManager: NSObject {
 
 /**
-* 플러스적립 화면 시작(머니박스 당첨화면)
-* @param isProd: 개발 / 상용 도메인을 설정하는 Bool 값 (필수, true = 상용 도메인, false = 개발 도메인)
-* @param isModal: 화면 호출방식 스택 / 모달 결정하는 Bool 값
-* @param mbrId: BC 페이북 머니회원번호 (필수)
+* 하루 세번 포인트 화면 시작
+* @param cid: geto 사용자 식별 번호 (필수)
 */
-func openBCPlusMoneyMenu(__ isProd : Bool,_ isModal : Bool = false, _ mbrId : String)
+func openEarningMenu(_ cid : String)
 
 /**
-* 플러스적립 화면 시작(출석체크 클로징 배너)
-* @param isProd: 개발 / 상용 도메인을 설정하는 Bool 값 (필수, true = 상용 도메인, false = 개발 도메인)
-* @param isModal: 화면 호출방식 스택 / 모달 결정하는 Bool 값
-* @param mbrId: BC 페이북 머니회원번호 (필수)
+* 쓰고받는 포인트 화면 시작
+* @param cid: geto 사용자 식별 번호 (필수)
 */
-func openBCPlusBannerMenu(_ isProd : Bool,_ isModal : Bool = false, _ mbrId : String)
+func openApprlNoMenu(_ cid : String)
 
 /**
-* 플러스적립 화면 시작(출석체크 메인 화면)
-* @param isProd: 개발 / 상용 도메인을 설정하는 Bool 값 (필수, true = 상용 도메인, false = 개발 도메인)
-* @param isModal: 화면 호출방식 스택 / 모달 결정하는 Bool 값
-* @param mbrId: BC 페이북 머니회원번호 (필수)
+* 쓰고받는 포인트 전면광고 오픈
+* @param cid: geto 사용자 식별 번호 (필수)
+* @param userInfoString: 승인데이터 (필수)
 */
-func openBCPlusMainMenu(_ isProd : Bool,_ isModal : Bool = false, _ mbrId : String)
+func openAdvertise(_ mbrId : String, userInfoString: String)
 
 }
 ```
 
-~~## 터치애드 광고 플랫폼 회원처리 시작~~
 
 
-## 플러스적립 화면 시작(머니박스 당첨화면)
+## 쓰고받는 포인트 전면광고 화면 시작 (백그라운드, IOS >= 10)
 
-*  BC 페이북 앱 내 머니박스 당첨 화면 팝업 화면에서 '머니박스 3개 더 받기' 버튼을 터치시 호출합니다.
+*  GETO 결제 푸시 수신하고 이때 쓰고받는 포인트 전면광고 화면을 띄울 경우 호출합니다.
 
-*  아래는 딥링크를 통해 호출하는 플러스적립 화면 시작함수 예시입니다.
+*  GETO 앱이 미실행 상태이거나 백그라운드 상태일 경우 MP앱이 실행된후에 전면광고 화면이 나타납니다.
+
+*  아래는 돈 버는 교통 전면광고 시작함수 호출 예시입니다.
 ```
-딥링크 - app://plusmoney?mbrId={머니회원번호}
-
-함수호출 - 
-let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
-let isModal : Bool = true(모달) 또는 false(스택)
-
-TASDKManager.openBCPlusMoneyMenu(isProd, isModal, mbrId)
-```
-
-## 플러스적립 화면 시작(출석체크 클로징 배너)
-
-*  BC 페이북 앱 내 출석체크 클로징 배너에서 '머니 PLUS' 버튼을 터치시 호출합니다.
-
-*  아래는 딥링크를 통해 호출하는 플러스적립 화면 시작함수 예시입니다.
-```
-딥링크 - app://plusbanner?mbrId={머니회원번호}
-
-함수호출 - 
-let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
-let isModal : Bool = true(모달) 또는 false(스택)
-
-TASDKManager.openBCPlusBannerMenu(isProd, isModal, mbrId)
+func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+    TASDKManager.openAdvertise("geto 사용자 식별 번호", userInfoString: notification.request.content.userInfo)
+        
+    completionHandler()
+}
 ```
 
-## 플러스적립 화면 시작(출석체크 메인 화면)
+## 쓰고받는 포인트 전면광고 화면 시작 (포그라운드, IOS >= 10)
 
-*  BC 페이북 앱 내 출석체크 메인 화면에서 플러스적립 화면 시작 버튼을 터치시 호출합니다.
+*  GETO 결제 푸시 수신하고 이때 쓰고받는 포인트 전면광고 화면을 띄울 경우 호출합니다.
 
-*  아래는 딥링크를 통해 호출하는 플러스적립 화면 시작함수 예시입니다.
+*  GETO 앱이 실행 상태일 경우 전면광고 화면이 나타납니다.
+
+*  아래는 쓰고받는 포인트 전면광고 시작함수 호출 예시입니다.
 ```
-딥링크 - app://plusmain?mbrId={머니회원번호}
-
-함수호출 - 
-let isProd : Bool = true(상용 도메인) 또는 false(개발도메인)
-let isModal : Bool = true(모달) 또는 false(스택)
-
-TASDKManager.openBCPlusMainMenu(isProd, isModal, mbrId)
+func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    printd("willPresentNotification = \(notification.request.content.userInfo)")
+    
+        TASDKManager.openAdvertise("geto 사용자 식별 번호", userInfoString: notification.request.content.userInfo)
+    
+    completionHandler([.alert, .badge, .sound])
+}
 ```
+
+
+## 하루 세번 포인트 화면 시작
+
+*  GETO 앱 내에서 하루 세번 포인트 메뉴를 선택하면 약관동의 거치고 하루 세번 포인트 화면을 시작할때 호출합니다.
+
+*  아래는 하루 세번 포인트 화면 시작함수 호출 예시입니다.
+```
+TASDKManager.openEarningMenu("geto 사용자 식별 번호")
+```
+
+## 쓰고받는 포인트 화면 시작
+
+*  GETO 앱 내에서 쓰고받는 포인트 메뉴를 선택하면 약관동의 거치고 쓰고받는 포인트 화면을 시작할때 호출합니다.
+
+*  아래는 쓰고받는 포인트 화면 시작함수 호출 예시입니다.
+```
+TASDKManager.openApprlNoMenu("geto 사용자 식별 번호")
+```
+
+## FCM 전송
+
+* 터치애드는 푸시 송신 시 MP 에서 제공한 Public API를 이용하여 Push(FCM)를 전송합니다.
+* Form파라미터(**필수**)
+
+| 파라미터 | 내용 |
+|---|---|
+| `touchad`|문자열|
+
+* API를 통해 Post된 데이터를 FCM데이터 구성요소 중 data와 payload 프로퍼티에 담아서 FCM전송 바랍니다.(※ 변경 가능성 있습니다.)
+
+* FCM 전송 포맷 예시
+```
+{
+  "android": {
+    "priority": "high",
+    "data": {\"title\":\"Notification Title\",\"body\":\"Notification Contents\",\"cid\":\"\(cid)\",\"apprlNo\":\"12345678\",\"apprlAmount\":\"1200\",\"partnerCode\":\"2104\",\"postCd\":\"58848\",\"domain\":\"1.ta.runcomm.co.kr\"}"
+  },
+  "apns": {
+    "headers": {
+      "apns-priority": "10"
+    },
+    "payload": {\"title\":\"Notification Title\",\"body\":\"Notification Contents\",\"cid\":\"\(cid)\",\"apprlNo\":\"12345678\",\"apprlAmount\":\"1200\",\"partnerCode\":\"2104\",\"postCd\":\"58848\",\"domain\":\"1.ta.runcomm.co.kr\"}",
+    "fcm_options": {
+      "image": "https://1.ta.runcomm.co.kr/html/img/profile00.png"
+    }
+  },
+  "tokens": [
+    "f3T_OObOQX-yo4J3y5bjcG:APA91bGzI2k8Fiz41ivql0ZV10hXLJz7w11Ne5Nf9IiZ1FymlJcGi-QRzv2lg3k46AYKamx-va2dyzj7m6TJTfCSTzTuPA7chomgSO_7PIh4LjsJ33SP7pDUoPvlGOeiM6oi5YXLiGvL"
+  ]
+}
+```
+
+## 빌드시  주의사항
+
+* 애플 앱스토어 혹은 TestFlight 를 통한 앱배포시에는 x86_64 아키텍쳐 빌드가 제외된 SDK 로 빌드하여야 합니다.
+* arm64  빌드 SDK :  폴더/ios_touchAd_sdk/TouchadSDK.xcframework
 
 ## Sample 프로젝트
 

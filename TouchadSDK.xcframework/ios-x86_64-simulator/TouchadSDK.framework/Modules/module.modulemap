@@ -7,5 +7,4 @@ framework module TouchadSDK {
 
 module TouchadSDK.Swift {
   header "TouchadSDK-Swift.h"
-  requires objc
 }

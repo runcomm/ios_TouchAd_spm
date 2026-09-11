@@ -1,0 +1,51 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TouchadSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import AVFoundation
+import AdSupport
+import Alamofire
+import AppTrackingTransparency
+import CoreTelephony
+import DeveloperToolsSupport
+import Foundation
+import JWTDecode
+import ObjectMapper
+import Swift
+import SwiftUI
+@_exported import TouchadSDK
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class TASDKManager : ObjectiveC.NSObject {
+  public static var mbrId: Swift.String {
+    get
+  }
+  public static var domain: Swift.String {
+    get
+    set(value)
+  }
+  public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String)
+  public static func initializeA(_ mbrId: Swift.String, platformId: Swift.String, pushToken: Swift.String?)
+  @objc public static func openAdvertiseA(_ userInfo: [Swift.AnyHashable : Any])
+  @objc public static func startTouchAdWebviewA()
+  @objc public static func openEarningMenu(_ cid: Swift.String)
+  @objc public static func openAdvertise(_ cid: Swift.String, userInfoString: Swift.String)
+  @objc public static func openApprlNoMenu(_ cid: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public func printd(_ item: Any, function: Swift.String = #function, file: Swift.String = #file, line: Swift.Int = #line)
+extension UIKit.UIDatePicker {
+  @_Concurrency.MainActor @preconcurrency public var clampedDate: Foundation.Date {
+    get
+  }
+}
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor @preconcurrency public var visibleViewController: UIKit.UIViewController? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func visibleViewControllerFrom(vc: UIKit.UIViewController? = UIApplication.shared.windows.first?.rootViewController) -> UIKit.UIViewController?
+}
